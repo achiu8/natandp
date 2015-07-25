@@ -17,3 +17,9 @@ mainController.$inject = ['$scope'];
 
 natAndP.controller('mainController', mainController);
 natAndP.config(routes);
+
+natAndP.init = function() {
+  angular.bootstrap(document, ['natAndP']);
+}
+
+natAndP.init();
