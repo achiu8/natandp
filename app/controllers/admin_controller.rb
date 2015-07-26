@@ -2,9 +2,14 @@ class AdminController < ApplicationController
   before_filter :login_required, only: [:index]
 
   def index
-    attending = params[:attending] || Guest::ATTENDING_VALUES
-    attending = [attending].concat([:both]) if attending != :neither.to_s
-    render locals: { guests: Guest.where(attending: attending) }
+    guests = Guest.all
+    number_attending_saratoga_springs = number_attending(guests, 'saratoga_springs')
+    number_attending_thailand = number_attending(guests, 'thailand')
+    render locals: {
+      guests: guests,
+      number_attending_saratoga_springs: number_attending_saratoga_springs,
+      number_attending_thailand: number_attending_thailand
+    }
   end
 
   def verify_login
@@ -18,5 +23,10 @@ class AdminController < ApplicationController
     if !session[:admin_id]
       redirect_to login_path
     end
+  end
+
+  def number_attending(guests, wedding)
+    guests_attending = guests.select { |guest| guest.attending == wedding || guest.attending == 'both' }
+    guests_attending.map(&:plus_ones).reduce(:+) + guests_attending.length
   end
 end
