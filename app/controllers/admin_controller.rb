@@ -4,7 +4,7 @@ class AdminController < ApplicationController
   def index
     attending = params[:attending] || Guest::ATTENDING_VALUES
     attending = [attending].concat([:both]) if attending != :neither.to_s
-    @guests = Guest.where(attending: attending)
+    render locals: { guests: Guest.where(attending: attending) }
   end
 
   def verify_login
