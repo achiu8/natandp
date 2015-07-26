@@ -1,24 +1,16 @@
 define([
   'controller/main_controller',
+  'routes',
   'angular',
   'angular-route'
 ], function(
   mainController,
+  routes,
   angular
 ) {
   var natAndP = angular.module('natAndP', ['ngRoute']);
 
-  var routes = function($routeProvider, $locationProvider) {
-    $routeProvider.when('/', {
-      templateUrl: 'templates/main.html',
-      controller: mainController
-    });
-  }
-
-  routes.$inject = ['$routeProvider'];
-
   natAndP.controller('mainController', mainController);
-
   natAndP.config(routes);
 
   natAndP.init = function() {
