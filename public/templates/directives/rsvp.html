@@ -1,20 +1,34 @@
-<h1>RSVP</h1>
+<h1>{{title}}</h1>
 <form ng-submit="submitForm()">
-  I, <input type="text" placeholder="YOUR NAME HERE" name="guestName" ng-model="form.guestName" />
-  <select placeholder="AM ATTENDING" ng-model="form.willAttend">
-    <option value="yes">AM ATTENDING</option>
-    <option value="no">AM NOT ATTENDING</option>
-  </select> the festivities.
-  I bring
-  <select ng-model="form.noOfGuests">
-    <option value="1">1</option>
-    <option value="2">2</option>
-    <option value="3">3</option>
-    <option value="4">4</option>
-    <option value="5">5</option>
-    <option value="more">+5</option>
-  </select> guest(s) to the celebration.
+  I, <input type="text" placeholder="FIRST NAME" name="first-name" ng-model="guest.firstName" />
+  <input type="text" placeholder="LAST NAME" name="last-name" ng-model="guest.lastName" /> will celebrate
+  <select ng-model="guest.willAttend">
+    <option value="true">celebrate in person.</option>
+    <option value="false">celebrate in spirit.</option>
+  </select>
   <br />
+
+  <div ng-if="guest.willAttend === 'true'">
+    I will be attending
+    <label>
+      <input type="checkbox" ng-model="guest.attendingSaratoga" ng-true-value="true" ng-false-value="false"/>
+      Saratoga Springs
+    </label>
+    <label>
+      <input type="checkbox" ng-model="guest.attendingThailand" ng-true-value="true" ng-false-value="false"/>
+      Bangkok, Thailand
+    </label>
+    and will be bring
+    <select ng-model="guest.plus_ones" ng-options="num for num in [1,2,3,4,5]">
+    </select>
+    guests.
+    <br />
+  </div>
+  <br />
+  You can me at:
+  <input type="text" placeholder="MYEAMIL@EXAMPLE.COM"/>
+  <input type="text"placeholder="(555)555-1234"/>
+
   <input type="submit" />
 </form>
 
