@@ -22,4 +22,13 @@ body {
 
 section {
   height: 100vh;
+  border: 1px solid green;
+}
+
+#up-to-top {
+  border: 1px solid blue;
+  position: fixed;
+  bottom: 5%;
+  right: 5%;
+  padding: 1em;
 }
