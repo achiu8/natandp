@@ -6,11 +6,6 @@ define([], function() {
       $location.hash(id);
       $anchorScroll();
     }
-
-    $scope.submitForm = function() {
-      console.log('Submitt form...');
-      console.log($scope.form);
-    }
   };
 
   mainController.$inject = ['$scope', '$location', '$anchorScroll'];
