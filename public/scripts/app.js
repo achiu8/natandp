@@ -1,25 +1,22 @@
-var natAndP = angular.module('natAndP', ['ngRoute']);
+define([
+  'controller/main_controller',
+  'routes',
+  'angular',
+  'angular-route'
+], function(
+  mainController,
+  routes,
+  angular
+) {
+  var natAndP = angular.module('natAndP', ['ngRoute']);
 
-var routes = function($routeProvider, $locationProvider) {
-  $routeProvider.when('/', {
-    templateUrl: 'templates/main.html',
-    controller: mainController
-  });
-}
+  natAndP.controller('mainController', mainController);
+  natAndP.config(routes);
 
-routes.$inject = ['$routeProvider'];
+  natAndP.init = function() {
+    angular.bootstrap(document, ['natAndP']);
+  }
 
-var mainController = function($scope) {
-  $scope.text = "hello world";
-};
+  return natAndP;
+});
 
-mainController.$inject = ['$scope'];
-
-natAndP.controller('mainController', mainController);
-natAndP.config(routes);
-
-natAndP.init = function() {
-  angular.bootstrap(document, ['natAndP']);
-}
-
-natAndP.init();
