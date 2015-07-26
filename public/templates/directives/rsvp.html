@@ -1,34 +1,33 @@
 <h1>{{title}}</h1>
 <form ng-submit="submitForm()">
-  I, <input type="text" placeholder="FIRST NAME" name="first-name" ng-model="guest.firstName" />
-  <input type="text" placeholder="LAST NAME" name="last-name" ng-model="guest.lastName" /> will celebrate
-  <select ng-model="guest.willAttend">
-    <option value="true">celebrate in person.</option>
-    <option value="false">celebrate in spirit.</option>
-  </select>
-  <br />
+  <p>I,
+    <input type="text" placeholder="FIRST NAME" name="first-name" ng-model="guest.firstName" />
+    <input type="text" placeholder="LAST NAME" name="last-name" ng-model="guest.lastName" /> will celebrate
+    <select ng-model="guest.willAttend" ng-options="o.value as o.label for o in attendingOptions"></select>
+  </p>
 
-  <div ng-if="guest.willAttend === 'true'">
-    I will be attending
+  <div ng-if="guest.willAttend">
+    <p>I will be attending the celebration at</p>
     <label>
       <input type="checkbox" ng-model="guest.attendingSaratoga" ng-true-value="true" ng-false-value="false"/>
       Saratoga Springs
-    </label>
+    </label><br />
     <label>
       <input type="checkbox" ng-model="guest.attendingThailand" ng-true-value="true" ng-false-value="false"/>
       Bangkok, Thailand
-    </label>
+    </label><br />
     and will be bring
     <select ng-model="guest.plus_ones" ng-options="num for num in [1,2,3,4,5]">
     </select>
     guests.
-    <br />
   </div>
-  <br />
-  You can me at:
-  <input type="text" placeholder="MYEAMIL@EXAMPLE.COM"/>
-  <input type="text"placeholder="(555)555-1234"/>
+  <div>
+    <br />
+    You can reach me at:
+    <br /><input type="text" ng-model="guest.email" placeholder="MYEAMIL@EXAMPLE.COM"/>
+    <br /><input type="text" ng-model="guest.phone" placeholder="(555)555-1234"/>
+  </div>
 
-  <input type="submit" />
+  <br /><input type="submit" />
 </form>
 
