@@ -1,7 +1,9 @@
 define([
+  'controller/main_controller',
   'angular',
   'angular-route'
 ], function(
+  mainController,
   angular
 ) {
   var natAndP = angular.module('natAndP', ['ngRoute']);
@@ -15,18 +17,8 @@ define([
 
   routes.$inject = ['$routeProvider'];
 
-  var mainController = function($scope, $location, $anchorScroll) {
-    $scope.text = "hello world";
-
-    $scope.goTo = function(id) {
-      $location.hash(id);
-      $anchorScroll();
-    }
-  };
-
-  mainController.$inject = ['$scope', '$location', '$anchorScroll'];
-
   natAndP.controller('mainController', mainController);
+
   natAndP.config(routes);
 
   natAndP.init = function() {
