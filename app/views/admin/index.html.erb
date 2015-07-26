@@ -1,22 +1,28 @@
-<% Guest::ATTENDING_VALUES.each do |attending| %>
-  <a href="<%= admin_path(attending: attending) %>"><%= format_attending(attending) %></a>
-<% end %>
+<div class="admin-container">
+  Guests
+  <select class="attending-select">
+    <option value="any">that have RSVP'd</option>
+    <% Guest::ATTENDING_VALUES.each do |attending| %>
+      <option value="<%= attending %>"><%= attending_to_words(attending) %></option>
+    <% end %>
+  </select>
 
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Plus Ones</th>
-    <th>Attending</th>
-    <th>Email</th>
-    <th>Phone</th>
-  </tr>
-  <% guests.each do |guest| %>
+  <table class="admin-guests-table">
     <tr>
-      <td><%= guest.name %></td>
-      <td><%= guest.plus_ones %></td>
-      <td><%= format_attending(guest.attending) %></td>
-      <td><%= guest.email %></td>
-      <td><%= guest.phone %></td>
+      <th>Name</th>
+      <th>Plus Ones</th>
+      <th>Attending</th>
+      <th>Email</th>
+      <th>Phone</th>
     </tr>
-  <% end %>
-</table>
+    <% guests.each do |guest| %>
+      <tr class="admin-guest attending-<%= guest.attending %>">
+        <td><%= guest.name %></td>
+        <td><%= guest.plus_ones %></td>
+        <td><%= format_attending(guest.attending) %></td>
+        <td><%= guest.email %></td>
+        <td><%= guest.phone %></td>
+      </tr>
+    <% end %>
+  </table>
+</div>
