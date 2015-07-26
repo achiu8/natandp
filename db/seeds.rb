@@ -1,5 +1,3 @@
-ATTENDING_VALUES = [:neither, :saratoga_springs, :thailand, :both]
-
 25.times do
   Guest.create(
     first_name: Faker::Name.first_name,
@@ -7,6 +5,6 @@ ATTENDING_VALUES = [:neither, :saratoga_springs, :thailand, :both]
     plus_ones: rand(5),
     phone: Faker::PhoneNumber.phone_number,
     email: Faker::Internet.email,
-    attending: ATTENDING_VALUES.sample,
+    attending: Guest::ATTENDING_VALUES.sample,
   )
 end

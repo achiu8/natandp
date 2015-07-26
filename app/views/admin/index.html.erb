@@ -1,5 +1,22 @@
-<ul>
-  <% @guests.each do |guest| %>
-    <li><%= guest.name %></li>
+<% Guest::ATTENDING_VALUES.each do |attending| %>
+  <a href="<%= admin_path(attending: attending) %>"><%= format_attending(attending) %></a>
+<% end %>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Plus Ones</th>
+    <th>Attending</th>
+    <th>Email</th>
+    <th>Phone</th>
+  </tr>
+  <% guests.each do |guest| %>
+    <tr>
+      <td><%= guest.name %></td>
+      <td><%= guest.plus_ones %></td>
+      <td><%= format_attending(guest.attending) %></td>
+      <td><%= guest.email %></td>
+      <td><%= guest.phone %></td>
+    </tr>
   <% end %>
-</ul>
+</table>
