@@ -31,6 +31,24 @@
 
 <section id="rsvp">
   <h1>RSVP</h1>
+  <form ng-submit="submitForm()">
+    I, <input type="text" placeholder="YOUR NAME HERE" name="guestName" ng-model="form.guestName" />
+    <select placeholder="AM ATTENDING" ng-model="form.willAttend">
+      <option value="yes">AM ATTENDING</option>
+      <option value="no">AM NOT ATTENDING</option>
+    </select> the festivities.
+    I bring
+    <select ng-model="form.noOfGuests">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+      <option value="more">+5</option>
+    </select> guest(s) to the celebration.
+    <br />
+    <input type="submit" />
+  </form>
 </section>
 
 <section id="registry">
