@@ -1,5 +1,5 @@
 define([], function() {
-  var rsvpController = function($scope) {
+  var rsvpController = function($scope, $http) {
     $scope.title = "RSVP Y'all";
     $scope.guest = {};
     $scope.attendingOptions = [
@@ -9,10 +9,19 @@ define([], function() {
 
     $scope.submitForm = function() {
       var parsedResponse = parseRsvpFormResponse($scope.guest);
-      console.log(parsedResponse);
 
-      // fire the torpedoes!!!!!
-    }
+      console.log('FIRE THE TORPEDOES!!!');
+
+      $http.post('/create_guest', {
+        guest: parsedResponse
+      })
+      .success(function() {
+        console.log('success!!!!');
+      })
+      .error(function() {
+        console.log('we fucked up');
+      });;
+    };
 
     function parseRsvpFormResponse(response) {
       return {
@@ -23,7 +32,7 @@ define([], function() {
         email: response.email,
         attending: parseAttendingResponse(response)
       }
-    }
+    };
 
     function parseAttendingResponse(response) {
       if (response.willAttend) {
@@ -40,7 +49,7 @@ define([], function() {
     }
   };
 
-  rsvpController.$inject = ['$scope'];
+  rsvpController.$inject = ['$scope', '$http'];
 
-  return rsvpController
+  return rsvpController;
 });
