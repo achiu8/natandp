@@ -1,4 +1,56 @@
-<h1>Main Template</h1>
-<div>
-  {{text}}
+<nav class="nav-bar" id="navbar">
+  <ul>
+    <li><a ng-click="goTo('story')">Story</a></li>
+    <li><a ng-click="goTo('pictures')">Pictures</a></li>
+    <li><a ng-click="goTo('wedding-party')">The Wedding Party</a></li>
+    <li><a ng-click="goTo('event-information')">Event Information</a></li>
+    <li><a ng-click="goTo('rsvp')">RSVP</a></li>
+    <li><a ng-click="goTo('registry')">Registry</a></li>
+  </ul>
+</nav>
+
+<div id="up-to-top">
+  <a ng-click="goTo('navbar')">back to top</a>
 </div>
+
+<section id="story">
+  <h1>Story</h1>
+</section>
+
+<section id="pictures">
+  <h1>Pictures</h1>
+</section>
+
+<section id="wedding-party">
+  <h1>The Wedding Party</h1>
+</section>
+
+<section id="event-information">
+  <h1>Event Information</h1>
+</section>
+
+<section id="rsvp">
+  <h1>RSVP</h1>
+  <form ng-submit="submitForm()">
+    I, <input type="text" placeholder="YOUR NAME HERE" name="guestName" ng-model="form.guestName" />
+    <select placeholder="AM ATTENDING" ng-model="form.willAttend">
+      <option value="yes">AM ATTENDING</option>
+      <option value="no">AM NOT ATTENDING</option>
+    </select> the festivities.
+    I bring
+    <select ng-model="form.noOfGuests">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+      <option value="more">+5</option>
+    </select> guest(s) to the celebration.
+    <br />
+    <input type="submit" />
+  </form>
+</section>
+
+<section id="registry">
+  <h1>Registry</h1>
+</section>
