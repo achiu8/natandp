@@ -2,7 +2,14 @@ class AdminController < ApplicationController
   before_filter :login_required, only: [:index]
 
   def index
-    render locals: { guests: Guest.all }
+    guests = Guest.all
+    number_attending_saratoga_springs = number_attending(guests, 'saratoga_springs')
+    number_attending_thailand = number_attending(guests, 'thailand')
+    render locals: {
+      guests: guests,
+      number_attending_saratoga_springs: number_attending_saratoga_springs,
+      number_attending_thailand: number_attending_thailand
+    }
   end
 
   def verify_login
@@ -19,6 +26,7 @@ class AdminController < ApplicationController
   end
 
   def number_attending(guests, wedding)
-    guests.to_a.count { |guest| guest.attending == wedding || guest.attending == 'both' }
+    guests_attending = guests.select { |guest| guest.attending == wedding || guest.attending == 'both' }
+    guests_attending.map(&:plus_ones).reduce(:+) + guests_attending.length
   end
 end
