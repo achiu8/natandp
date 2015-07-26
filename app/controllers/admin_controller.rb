@@ -17,4 +17,8 @@ class AdminController < ApplicationController
       redirect_to login_path
     end
   end
+
+  def number_attending(guests, wedding)
+    guests.to_a.count { |guest| guest.attending == wedding || guest.attending == 'both' }
+  end
 end
