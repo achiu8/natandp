@@ -1,3 +1,9 @@
+test:
+  adapter: postgresql
+  encoding: unicode
+  data_base: natandp_test
+  pool: 5
+
 development:
   adapter: postgresql
   encoding: unicode
