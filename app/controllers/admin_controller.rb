@@ -27,6 +27,7 @@ class AdminController < ApplicationController
 
   def number_attending(guests, wedding)
     guests_attending = guests.select { |guest| guest.attending == wedding || guest.attending == 'both' }
+    return 0 if guests_attending.empty?
     guests_attending.map(&:plus_ones).reduce(:+) + guests_attending.length
   end
 end

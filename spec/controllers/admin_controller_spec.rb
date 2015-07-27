@@ -49,5 +49,10 @@ RSpec.describe AdminController, type: :controller do
       controller.send(:number_attending, all_guests, 'saratoga_springs').should == 6
       controller.send(:number_attending, all_guests, 'thailand').should == 7
     end
+
+    it 'returns 0 if no guests attending specified wedding' do
+      controller.send(:number_attending, [guest_neither, guest_ss], 'thailand').should == 0
+      controller.send(:number_attending, [], 'thailand').should == 0
+    end
   end
 end
