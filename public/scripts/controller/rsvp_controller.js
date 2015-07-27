@@ -27,7 +27,7 @@ define([], function() {
       return {
         first_name: response.firstName,
         last_name: response.lastName,
-        plus_ones: response.plus_ones,
+        plus_ones: response.plusOnes,
         phone: response.phone,
         email: response.email,
         attending: parseAttendingResponse(response)
