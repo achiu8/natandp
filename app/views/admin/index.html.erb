@@ -1,17 +1,17 @@
 <div class="admin-container">
   <section class="admin-summary pure-g">
-    <div class="admin-summary-saratoga-springs pure-u-1-2">
-      <%= number_attending_saratoga_springs %>
-      guests attending Saratoga Springs
+    <div class="admin-summary-number-attending pure-u-11-24">
+      <p class="admin-number-attending"><%= number_attending_saratoga_springs %></p>
+      <p class="admin-number-attending-description">guests attending Saratoga Springs</p>
     </div>
-    <div class="admin-summary-thailand pure-u-1-2">
-      <%= number_attending_thailand %>
-      guests attending Thailand
+    <div class="admin-summary-number-attending pure-u-11-24">
+      <p class="admin-number-attending"><%= number_attending_thailand %></p>
+      <p class="admin-number-attending-description">guests attending Thailand</p>
     </div>
   </section>
 
   <section class="admin-guests">
-    Guests
+    View guests
     <select class="attending-select">
       <option value="any">that have RSVP'd</option>
       <% Guest::ATTENDING_VALUES.each do |attending| %>
@@ -21,16 +21,16 @@
 
     <table class="admin-guests-table">
       <tr>
-        <th>Name</th>
-        <th>Plus Ones</th>
-        <th>Attending</th>
-        <th>Email</th>
-        <th>Phone</th>
+        <th class="admin-guests-table-heading">Name</th>
+        <th class="admin-guests-table-heading">Plus Ones</th>
+        <th class="admin-guests-table-heading">Attending</th>
+        <th class="admin-guests-table-heading">Email</th>
+        <th class="admin-guests-table-heading">Phone</th>
       </tr>
       <% guests.each do |guest| %>
         <tr class="admin-guest attending-<%= guest.attending %>">
           <td><%= guest.name %></td>
-          <td><%= guest.plus_ones %></td>
+          <td class="c"><%= guest.plus_ones %></td>
           <td><%= format_attending(guest.attending) %></td>
           <td><%= guest.email %></td>
           <td><%= guest.phone %></td>

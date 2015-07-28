@@ -1,28 +1,48 @@
+@import 'colors';
+@import 'font_faces/avenir';
+
 body {
   height: 100%;
   margin: 0;
+  font-family: $avenir;
+  font-weight: 300;
 }
 
 .nav-bar {
+  position: fixed;
+  width: 100%;
   text-align: center;
+  line-height: 3em;
+  font-weight: 300;
+  color: $charcoal;
+  background-color: $light_grey;
 }
 
-.nav-bar ul {
+.nav-bar-items {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
 
-.nav-bar li {
+.nav-bar-item {
   display: inline-block;
-  border: 1px solid red;
-  padding: 1.1em;
-  margin: 1em;
+  margin-left: 1.5em;
+  cursor: pointer;
+  &:first-child {
+    margin-left: 0;
+  }
 }
 
 .app section {
-  height: 100vh;
+  height: calc(100vh - 3em);
+  padding: 3em 3em 0;
   border: 1px solid green;
+}
+
+.section-title {
+  font-size: 4em;
+  font-weight: 300;
+  text-align: center;
 }
 
 #up-to-top {
@@ -31,4 +51,5 @@ body {
   bottom: 5%;
   right: 5%;
   padding: 1em;
+  cursor: pointer;
 }
