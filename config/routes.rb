@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root 'main#index'
+  root 'main#angular'
   post 'create_guest' => 'main#create_guest'
 
   get 'admin' => 'admin#index'

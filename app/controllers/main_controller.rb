@@ -1,6 +1,10 @@
 class MainController < ApplicationController
   skip_before_filter :verify_authenticity_token
 
+  def angular
+    render 'index'
+  end
+
   def create_guest
     @guest = Guest.new(guest_params)
     if @guest.save

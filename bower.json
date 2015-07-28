@@ -1,0 +1,17 @@
+{
+  "name": "natandp",
+  "version": "1.0.0",
+  "homepage": "https://github.com/achiu8/natandp",
+  "authors": [
+    "kprakobkit <kprakobkit@gmail.com>"
+  ],
+  "description": "natandp",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
