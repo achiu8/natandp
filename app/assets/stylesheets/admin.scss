@@ -1,6 +1,46 @@
+@import 'colors';
+@import 'font_faces/avenir';
+
+$content_width: 960px;
+
+.admin-container * {
+  font-family: $avenir;
+}
+
 .admin-container {
   margin: 0 auto;
-  width: 800px;
+  padding-top: 50px;
+  width: $content_width;
+}
+
+.admin-summary-number-attending {
+  border-right: 10px solid $grey;
+  border-bottom: 10px solid $grey;
+  box-sizing: border-box;
+  text-align: center;
+  background-color: $light_grey;
+  &:first-child {
+    margin-right: $content_width * 2 / 24;
+  }
+}
+
+.admin-number-attending {
+  margin-bottom: 0;
+  font-size: 3em;
+}
+
+.admin-number-attending-description {
+  margin: 0 0 2em;
+}
+
+.attending-select {
+  margin-left: 0.5em;
+  border: none;
+  outline: 1px inset $grey;
+  outline-offset: -1px;
+  box-shadow: none;
+  background-color: $white;
+  height: 2em;
 }
 
 .admin-guests {
@@ -8,10 +48,25 @@
 }
 
 .admin-guests-table {
-  margin-top: 25px;
+  margin-top: 50px;
   width: 100%;
+}
+
+.admin-guests-table-heading {
+  border-bottom: 1px solid $grey;
+  padding: 0 25px;
+  line-height: 2em;
+  font-weight: 600;
+}
+
+.admin-guest {
+  line-height: 2em;
 }
 
 .admin-guest-hidden {
   display: none;
+}
+
+.c {
+  text-align: center;
 }

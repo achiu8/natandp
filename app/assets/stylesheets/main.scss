@@ -34,7 +34,7 @@ body {
 }
 
 .app section {
-  height: 100vh;
+  height: calc(100vh - 3em);
   padding: 3em 3em 0;
   border: 1px solid green;
 }
