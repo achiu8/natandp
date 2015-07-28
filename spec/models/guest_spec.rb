@@ -10,4 +10,10 @@ RSpec.describe Guest, type: :model do
       guest.name.should == "#{first_name} #{last_name}"
     end
   end
+
+  describe '#plus_ones' do
+    it 'defaults plus_ones to 0' do
+      Guest.create.plus_ones.should == 0
+    end
+  end
 end
