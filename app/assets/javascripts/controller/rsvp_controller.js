@@ -1,5 +1,5 @@
 var rsvpController = function($scope, $http) {
-  $scope.title = "RSVP Y'all";
+  $scope.title = "rsvp y'all";
   $scope.guest = {};
   $scope.attendingOptions = [
     {value: true, label: 'in person'},
