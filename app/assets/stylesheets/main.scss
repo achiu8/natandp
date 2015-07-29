@@ -53,3 +53,61 @@ body {
   padding: 1em;
   cursor: pointer;
 }
+
+.rsvp-form {
+  text-align: center;
+  font-size: 1.5em;
+}
+
+.rsvp-form input {
+  border: 0;
+  outline: 0;
+  border-bottom: 1px solid;
+  padding: 0.25em 0.5em;
+  margin: 0.5em;
+}
+
+.first-name {
+  width: 150px;
+}
+
+.last-name {
+  width: 200px;
+}
+
+.email, .phone{
+  width: 300px;
+}
+
+.rsvp-form select {
+  width: 200px;
+  border: none;
+}
+
+label.check-box {
+  line-height: 1.5em;
+}
+ .num-guests {
+   margin: 1.5em;
+ }
+
+ .select-events {
+   margin: 1.5em;
+ }
+
+ .contact-info {
+   margin-top: 100px;
+ }
+
+ .contact-info input {
+   width: 400px;
+   line-height: 1.5em;
+ }
+
+ .not-attending {
+   margin: 2em;
+ }
+
+ .thank-you {
+   text-align: center;
+ }

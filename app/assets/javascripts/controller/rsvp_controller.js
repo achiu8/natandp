@@ -1,6 +1,7 @@
-var rsvpController = function($scope, $http) {
-  $scope.title = "rsvp y'all";
+var rsvpController = function($scope, $http, $timeout) {
   $scope.guest = {};
+  $scope.guest.plusOnes = 0;
+  $scope.guest.willAtend = 0;
   $scope.attendingOptions = [
     {value: true, label: 'in person'},
     {value: false, label: 'in spirit'}
@@ -9,18 +10,24 @@ var rsvpController = function($scope, $http) {
   $scope.submitForm = function() {
     var parsedResponse = parseRsvpFormResponse($scope.guest);
 
-    console.log('FIRE THE TORPEDOES!!!');
-
     $http.post('/create_guest', {
       guest: parsedResponse
     })
     .success(function() {
-      console.log('success!!!!');
+      console.log('success');
+      showThankyouNotification();
     })
     .error(function() {
-      console.log('we fucked up');
+      console.log('error');
     });;
   };
+
+  function showThankyouNotification() {
+    $scope.showThankyou = true;
+    $timeout(function() {
+      $scope.showThankyou = false;
+    }, 7000);
+  }
 
   function parseRsvpFormResponse(response) {
     return {
@@ -48,5 +55,5 @@ var rsvpController = function($scope, $http) {
   }
 };
 
-rsvpController.$inject = ['$scope', '$http'];
+rsvpController.$inject = ['$scope', '$http', '$timeout'];
 natAndP.controller('rsvpController', rsvpController);
