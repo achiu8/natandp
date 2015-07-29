@@ -1,6 +1,7 @@
 var rsvpController = function($scope, $http) {
   $scope.guest = {};
   $scope.guest.plusOnes = 0;
+  $scope.guest.willAtend = 0;
   $scope.attendingOptions = [
     {value: true, label: 'in person'},
     {value: false, label: 'in spirit'}

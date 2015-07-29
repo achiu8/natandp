@@ -1,4 +1,4 @@
-<h1 class="section-title">RSVP</h1>
+<h1 class="section-title">rsvp</h1>
 <div class="rsvp-form">
   <form ng-submit="submitForm()">
     I
@@ -29,11 +29,15 @@
         guests.
       </div>
     </span>
-    <div>
-      <br />
-      You can reach me at:
-      <br /><input class="email" type="text" ng-model="guest.email" placeholder="MYEAMIL@EXAMPLE.COM"/>
-      <br /><input class="phone" type="text" ng-model="guest.phone" placeholder="(555)555-1234"/>
+
+    <div class="not-attending" ng-if="guest.willAttend == false">
+      "That's too bad...we'll miss you!"
+    </div>
+
+    <div class="contact-info">
+      <span>You can reach me at:</span>
+      <br /><input class="email" type="text" ng-model="guest.email" placeholder="myemail@address.com"/>
+      <br /><input class="phone" type="text" ng-model="guest.phone" placeholder="(109) 738 - 1234"/>
     </div>
 
     <br /><input type="submit" />

@@ -55,7 +55,7 @@ body {
 }
 
 .rsvp-form {
-  text-align: right;
+  text-align: center;
   font-size: 1.5em;
 }
 
@@ -64,7 +64,7 @@ body {
   outline: 0;
   border-bottom: 1px solid;
   padding: 0.25em 0.5em;
-  margin: 0.5;
+  margin: 0.5em;
 }
 
 .first-name {
@@ -93,4 +93,17 @@ label.check-box {
 
  .select-events {
    margin: 1.5em;
+ }
+
+ .contact-info {
+   margin-top: 100px;
+ }
+
+ .contact-info input {
+   width: 400px;
+   line-height: 1.5em;
+ }
+
+ .not-attending {
+   margin: 2em;
  }
