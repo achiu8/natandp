@@ -10,16 +10,14 @@ var rsvpController = function($scope, $http) {
   $scope.submitForm = function() {
     var parsedResponse = parseRsvpFormResponse($scope.guest);
 
-    console.log('FIRE THE TORPEDOES!!!');
-
     $http.post('/create_guest', {
       guest: parsedResponse
     })
     .success(function() {
-      console.log('success!!!!');
+      console.log('success');
     })
     .error(function() {
-      console.log('we fucked up');
+      console.log('error');
     });;
   };
 
