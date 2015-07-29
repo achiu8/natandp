@@ -53,3 +53,44 @@ body {
   padding: 1em;
   cursor: pointer;
 }
+
+.rsvp-form {
+  text-align: right;
+  font-size: 1.5em;
+}
+
+.rsvp-form input {
+  border: 0;
+  outline: 0;
+  border-bottom: 1px solid;
+  padding: 0.25em 0.5em;
+  margin: 0.5;
+}
+
+.first-name {
+  width: 150px;
+}
+
+.last-name {
+  width: 200px;
+}
+
+.email, .phone{
+  width: 300px;
+}
+
+.rsvp-form select {
+  width: 200px;
+  border: none;
+}
+
+label.check-box {
+  line-height: 1.5em;
+}
+ .num-guests {
+   margin: 1.5em;
+ }
+
+ .select-events {
+   margin: 1.5em;
+ }

@@ -1,5 +1,4 @@
 var rsvpController = function($scope, $http) {
-  $scope.title = "rsvp y'all";
   $scope.guest = {};
   $scope.guest.plusOnes = 0;
   $scope.attendingOptions = [
