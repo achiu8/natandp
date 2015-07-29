@@ -1,4 +1,4 @@
-var rsvpController = function($scope, $http) {
+var rsvpController = function($scope, $http, $timeout) {
   $scope.guest = {};
   $scope.guest.plusOnes = 0;
   $scope.guest.willAtend = 0;
@@ -15,11 +15,19 @@ var rsvpController = function($scope, $http) {
     })
     .success(function() {
       console.log('success');
+      showThankyouNotification();
     })
     .error(function() {
       console.log('error');
     });;
   };
+
+  function showThankyouNotification() {
+    $scope.showThankyou = true;
+    $timeout(function() {
+      $scope.showThankyou = false;
+    }, 7000);
+  }
 
   function parseRsvpFormResponse(response) {
     return {
@@ -47,5 +55,5 @@ var rsvpController = function($scope, $http) {
   }
 };
 
-rsvpController.$inject = ['$scope', '$http'];
+rsvpController.$inject = ['$scope', '$http', '$timeout'];
 natAndP.controller('rsvpController', rsvpController);

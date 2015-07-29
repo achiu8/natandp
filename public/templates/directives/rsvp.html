@@ -1,6 +1,19 @@
 <h1 class="section-title">rsvp</h1>
+
+<div class="thank-you" ng-if="showThankyou">
+  <p>
+    Thank you, {{guest.firstName}} {{guest.lastName}}
+  </p>
+  <p ng-if="guest.willAttend">
+    We can't wait to see you at the wedding!
+  </p>
+  <p ng-if="!guest.willAttend">
+    That's too bad you can't make it. We'll miss you!
+  </p>
+</div>
+
 <div class="rsvp-form">
-  <form ng-submit="submitForm()">
+  <form name="rsvpForm" ng-submit="submitForm()">
     I
     <input class="first-name" type="text" placeholder="FIRST NAME" name="first-name" ng-model="guest.firstName" />
     <input class="last-name" type="text" placeholder="LAST NAME" name="last-name" ng-model="guest.lastName" /> will celebrate
@@ -29,10 +42,6 @@
         guests.
       </div>
     </span>
-
-    <div class="not-attending" ng-if="guest.willAttend == false">
-      "That's too bad...we'll miss you!"
-    </div>
 
     <div class="contact-info">
       <span>You can reach me at:</span>
