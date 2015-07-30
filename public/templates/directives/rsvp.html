@@ -14,9 +14,9 @@
 
 <div class="rsvp-form">
   <form name="rsvpForm" ng-submit="submitForm()">
-    I
+    I,
     <input class="first-name" type="text" placeholder="FIRST NAME" name="first-name" ng-model="guest.firstName" />
-    <input class="last-name" type="text" placeholder="LAST NAME" name="last-name" ng-model="guest.lastName" /> will celebrate
+    <input class="last-name" type="text" placeholder="LAST NAME" name="last-name" ng-model="guest.lastName" />, will celebrate
     <select ng-model="guest.willAttend" ng-options="o.value as o.label for o in attendingOptions"></select>
 
     <span ng-if="guest.willAttend">
