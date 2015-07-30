@@ -123,3 +123,14 @@ label.check-box {
     list-style-type: none;
   }
 }
+
+footer {
+  background-color: $light_grey;
+}
+
+.footer-content {
+  text-align: right;
+  width: 90%;
+  margin: 0 auto;
+  padding: 1em;
+}
