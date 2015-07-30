@@ -1,9 +1,10 @@
 var mainController = function($scope, $location, $anchorScroll) {
   $scope.text = "hello world";
-  $scope.$body = $(document.body);
-  $scope.$navBar = $('.nav-bar');
-  $scope.$navBarIcon = $('.nav-bar-mobile');
   $scope.navBarMobileShown = false;
+
+  var $body = $(document.body);
+  var $navBar = $('.nav-bar');
+  var $navBarIcon = $('.nav-bar-mobile');
 
   $scope.goTo = function(id) {
     $location.hash(id);
@@ -16,14 +17,14 @@ var mainController = function($scope, $location, $anchorScroll) {
 
   $scope.toggleNav = function() {
     $scope.navBarMobileShown = !$scope.navBarMobileShown;
-    $scope.$body.toggleClass('scroll-lock', $scope.navBarMobileShown);
+    $body.toggleClass('scroll-lock', $scope.navBarMobileShown);
     resetNavPosition();
   };
 
   function resetNavPosition() {
     var navBarIconNewTop = $scope.navBarMobileShown ? window.scrollY : 0 ;
-    $scope.$navBar.css({ top: window.scrollY, position: 'fixed' });
-    $scope.$navBarIcon.css({ top: navBarIconNewTop + 10, position: 'fixed' });
+    $navBar.css({ top: window.scrollY, position: 'fixed' });
+    $navBarIcon.css({ top: navBarIconNewTop + 10, position: 'fixed' });
   }
 };
 
