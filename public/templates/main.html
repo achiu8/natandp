@@ -1,40 +1,45 @@
-<div id="top"></div>
+<div class="container" ng-class="{shifted: navBarMobileShown}">
+  <div id="top"></div>
 
-<nav class="nav-bar" id="navbar">
-  <ul class="nav-bar-items">
-    <li class="nav-bar-item"><a ng-click="goTo('story')">story</a></li>
-    <li class="nav-bar-item"><a ng-click="goTo('pictures')">pictures</a></li>
-    <li class="nav-bar-item"><a ng-click="goTo('wedding-party')">the wedding party</a></li>
-    <li class="nav-bar-item"><a ng-click="goTo('event-information')">event information</a></li>
-    <li class="nav-bar-item"><a ng-click="goTo('rsvp')">rsvp</a></li>
-    <li class="nav-bar-item"><a ng-click="goTo('registry')">registry</a></li>
-  </ul>
-</nav>
+  <nav class="nav-bar" id="navbar">
+    <ul class="nav-bar-items">
+      <li class="nav-bar-item"><a ng-click="goTo('story')">story</a></li>
+      <li class="nav-bar-item"><a ng-click="goTo('pictures')">pictures</a></li>
+      <li class="nav-bar-item"><a ng-click="goTo('wedding-party')">the wedding party</a></li>
+      <li class="nav-bar-item"><a ng-click="goTo('event-information')">event information</a></li>
+      <li class="nav-bar-item"><a ng-click="goTo('rsvp')">rsvp</a></li>
+      <li class="nav-bar-item"><a ng-click="goTo('registry')">registry</a></li>
+    </ul>
+  </nav>
 
-<div id="up-to-top">
-  <a ng-click="goTo('top')">back to top</a>
+  <i ng-hide="navBarMobileShown" ng-click="toggleNav()" class="nav-bar-mobile fa fa-bars fa-2x"></i>
+  <i ng-show="navBarMobileShown" ng-click="toggleNav()" class="nav-bar-mobile fa fa-chevron-right fa-2x"></i>
+
+  <div id="up-to-top">
+    <a ng-click="goTo('top')">back to top</a>
+  </div>
+
+  <section id="story">
+    <h1 class="section-title">story</h1>
+  </section>
+
+  <section id="pictures">
+    <h1 class="section-title">pictures</h1>
+  </section>
+
+  <section id="wedding-party">
+    <h1 class="section-title">the wedding party</h1>
+  </section>
+
+  <section id="event-information">
+    <h1 class="section-title">event information</h1>
+  </section>
+
+  <section id="rsvp">
+    <rsvp></rsvp>
+  </section>
+
+  <section id="registry">
+    <h1 class="section-title">registry</h1>
+  </section>
 </div>
-
-<section id="story">
-  <h1 class="section-title">story</h1>
-</section>
-
-<section id="pictures">
-  <h1 class="section-title">pictures</h1>
-</section>
-
-<section id="wedding-party">
-  <h1 class="section-title">the wedding party</h1>
-</section>
-
-<section id="event-information">
-  <h1 class="section-title">event information</h1>
-</section>
-
-<section id="rsvp">
-  <rsvp></rsvp>
-</section>
-
-<section id="registry">
-  <h1 class="section-title">registry</h1>
-</section>

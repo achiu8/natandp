@@ -1,11 +1,23 @@
+@import 'utils';
 @import 'colors';
 @import 'font_faces/avenir';
+@import 'font-awesome';
+
+$nav_mobile_width: 250px;
 
 body {
   height: 100%;
   margin: 0;
   font-family: $avenir;
   font-weight: 300;
+}
+
+.scroll-lock {
+  overflow: hidden;
+}
+
+.container {
+  transition: 0.5s;
 }
 
 .nav-bar {
@@ -16,6 +28,26 @@ body {
   font-weight: 300;
   color: $charcoal;
   background-color: $light_grey;
+
+  @include mobile {
+    right: -$nav_mobile_width;
+    width: $nav_mobile_width;
+    height: 100vh;
+  }
+}
+
+.nav-bar-mobile {
+  display: none;
+  @include mobile {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+  }
+}
+
+.shifted {
+  transform: translateX(-$nav_mobile_width);
 }
 
 .nav-bar-items {
@@ -28,8 +60,18 @@ body {
   display: inline-block;
   margin-left: 1.5em;
   cursor: pointer;
+
   &:first-child {
     margin-left: 0;
+  }
+
+  &:hover {
+    color: $white;
+  }
+
+  @include mobile {
+    display: block;
+    margin: 0;
   }
 }
 
