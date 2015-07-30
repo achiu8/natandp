@@ -12,6 +12,9 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require modernizr.custom
+//= require draggabilly.pkgd.min
+//= require elastiStack
 //= require angular
 //= require angular-route
 //= require angular-rails-templates
