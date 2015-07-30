@@ -12,6 +12,10 @@ body {
   font-weight: 300;
 }
 
+h1, h2, h3, h4 {
+  font-weight: 300;
+}
+
 .scroll-lock {
   overflow: hidden;
 }
@@ -76,7 +80,7 @@ body {
 }
 
 .app section {
-  height: calc(100vh - 3em);
+  min-height: calc(100vh - 3em);
   padding: 3em 3em 0;
   border: 1px solid green;
 }
@@ -99,6 +103,7 @@ body {
 .rsvp-form {
   text-align: center;
   font-size: 1.5em;
+  margin-bottom: 1.5em;
 }
 
 .rsvp-form input {
@@ -129,27 +134,34 @@ body {
 label.check-box {
   line-height: 1.5em;
 }
- .num-guests {
-   margin: 1.5em;
- }
+.num-guests {
+  margin: 1.5em;
+}
 
- .select-events {
-   margin: 1.5em;
- }
+.select-events {
+  margin: 1.5em;
+}
 
- .contact-info {
-   margin-top: 100px;
- }
+.contact-info {
+  margin-top: 100px;
+}
 
- .contact-info input {
-   width: 400px;
-   line-height: 1.5em;
- }
+.contact-info input {
+  width: 400px;
+  line-height: 1.5em;
+}
 
- .not-attending {
-   margin: 2em;
- }
+.not-attending {
+  margin: 2em;
+}
 
- .thank-you {
-   text-align: center;
- }
+.thank-you {
+  text-align: center;
+}
+
+.milestone {
+  text-align: center;
+  li {
+    list-style-type: none;
+  }
+}
