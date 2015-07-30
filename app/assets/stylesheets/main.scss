@@ -34,7 +34,7 @@ body {
 }
 
 .app section {
-  height: calc(100vh - 3em);
+  min-height: calc(100vh - 3em);
   padding: 3em 3em 0;
   border: 1px solid green;
 }
@@ -57,6 +57,7 @@ body {
 .rsvp-form {
   text-align: center;
   font-size: 1.5em;
+  margin-bottom: 1.5em;
 }
 
 .rsvp-form input {
