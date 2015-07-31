@@ -4,7 +4,7 @@
 @import 'font-awesome';
 
 $container_z_index: 1;
-$nav_mobile_width: 250px;
+$nav_mobile_width: 200px;
 $nav_mobile_toggle_margin: 10px;
 $transition_time: 0.5s;
 
@@ -62,7 +62,7 @@ h1, h2, h3, h4 {
     display: block !important;
     position: fixed;
     top: $nav_mobile_toggle_margin;
-    right: $nav_mobile_toggle_margin;
+    left: $nav_mobile_toggle_margin;
     cursor: pointer;
     transition: $transition_time;
     z-index: $container_z_index + 1;
@@ -70,11 +70,11 @@ h1, h2, h3, h4 {
 }
 
 .shifted {
-  left: -$nav_mobile_width;
+  left: $nav_mobile_width;
 }
 
 .shifted .nav-bar-mobile {
-  right: $nav_mobile_width + $nav_mobile_toggle_margin;
+  left: $nav_mobile_width + $nav_mobile_toggle_margin;
 }
 
 .nav-bar.show {
@@ -99,7 +99,6 @@ h1, h2, h3, h4 {
   padding: 0;
 
   @include mobile {
-    float: right;
     width: $nav_mobile_width;
   }
 }
