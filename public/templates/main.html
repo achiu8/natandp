@@ -1,16 +1,16 @@
+<nav class="nav-bar" id="navbar">
+  <ul class="nav-bar-items">
+    <li class="nav-bar-item"><a ng-click="goTo('story')">our story</a></li>
+    <li class="nav-bar-item"><a ng-click="goTo('pictures')">pictures</a></li>
+    <li class="nav-bar-item"><a ng-click="goTo('wedding-party')">the wedding party</a></li>
+    <li class="nav-bar-item"><a ng-click="goTo('event-information')">event information</a></li>
+    <li class="nav-bar-item"><a ng-click="goTo('rsvp')">rsvp</a></li>
+    <li class="nav-bar-item"><a ng-click="goTo('registry')">registry</a></li>
+  </ul>
+</nav>
+
 <div class="container" ng-class="{shifted: navBarMobileShown}">
   <div id="top"></div>
-
-  <nav class="nav-bar" id="navbar">
-    <ul class="nav-bar-items">
-      <li class="nav-bar-item"><a ng-click="goTo('story')">our story</a></li>
-      <li class="nav-bar-item"><a ng-click="goTo('pictures')">pictures</a></li>
-      <li class="nav-bar-item"><a ng-click="goTo('wedding-party')">the wedding party</a></li>
-      <li class="nav-bar-item"><a ng-click="goTo('event-information')">event information</a></li>
-      <li class="nav-bar-item"><a ng-click="goTo('rsvp')">rsvp</a></li>
-      <li class="nav-bar-item"><a ng-click="goTo('registry')">registry</a></li>
-    </ul>
-  </nav>
 
   <i ng-click="toggleNav()" class="nav-bar-mobile nav-bar-show fa fa-bars fa-2x"></i>
   <i ng-click="toggleNav()" class="nav-bar-mobile nav-bar-hide fa fa-chevron-right fa-2x"></i>
