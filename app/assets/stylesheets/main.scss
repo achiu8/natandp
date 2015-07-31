@@ -57,9 +57,8 @@ h1, h2, h3, h4 {
 }
 
 .nav-bar-mobile {
-  display: none !important;
+  display: none;
   @include mobile {
-    display: block !important;
     position: fixed;
     top: $nav_mobile_toggle_margin;
     left: $nav_mobile_toggle_margin;
