@@ -18,14 +18,7 @@ var mainController = function($scope, $location, $anchorScroll) {
   $scope.toggleNav = function() {
     $scope.navBarMobileShown = !$scope.navBarMobileShown;
     $body.toggleClass('scroll-lock', $scope.navBarMobileShown);
-    resetNavPosition();
   };
-
-  function resetNavPosition() {
-    var navBarIconNewTop = $scope.navBarMobileShown ? window.scrollY : 0 ;
-    $navBar.css({ top: window.scrollY, position: 'fixed' });
-    $navBarIcon.css({ top: navBarIconNewTop + 10, position: 'fixed' });
-  }
 };
 
 mainController.$inject = ['$scope', '$location', '$anchorScroll'];
