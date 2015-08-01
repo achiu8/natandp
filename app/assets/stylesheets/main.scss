@@ -96,6 +96,11 @@ h1, h2, h3, h4 {
   list-style-type: none;
   margin: 0;
   padding: 0;
+  
+  img {
+    vertical-align: middle;
+    margin: 0.5em;
+  }
 
   @include mobile {
     width: $nav_mobile_width;
@@ -131,15 +136,6 @@ h1, h2, h3, h4 {
   font-size: 4em;
   font-weight: 300;
   text-align: center;
-}
-
-#up-to-top {
-  border: 1px solid blue;
-  position: fixed;
-  bottom: 5%;
-  right: 5%;
-  padding: 1em;
-  cursor: pointer;
 }
 
 .rsvp-form {
