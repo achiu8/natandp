@@ -174,7 +174,6 @@ h1, h2, h3, h4 {
   border-bottom: 1px solid;
   padding: 0.25em 0.5em;
   margin: 0.5em;
-
 }
 
 .first-name {
@@ -207,19 +206,15 @@ label.check-box {
 
 .contact-info {
   margin-top: 100px;
-}
 
-.contact-info input {
-  width: 400px;
-  line-height: 1.5em;
+  input {
+    width: 400px;
+    line-height: 1.5em;
 
-  @include mobile {
-    width: 300px;
+    @include mobile {
+      width: 300px;
+    }
   }
-}
-
-.not-attending {
-  margin: 2em;
 }
 
 .thank-you {
