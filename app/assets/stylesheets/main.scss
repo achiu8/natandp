@@ -243,13 +243,18 @@ footer {
   img {
     display: block;
     margin: 0 auto;
+    border: 10px solid white;
   }
 }
 
 .picture-carousel-nav {
+  width: 70%;
+  margin: 0 auto;
+
   img {
     display: block;
     margin: 0 auto;
-    zoom: 25%;
+    zoom: 30%;
+    border: 5px solid white;
   }
 }

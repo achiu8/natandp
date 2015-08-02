@@ -11,9 +11,8 @@ var pictureSectionDirective = function() {
       });
 
       $('.picture-carousel-nav').slick({
-        slidesToShow: 2,
+        slidesToShow: 4,
         slidesToScroll: 1,
-        dots: true,
         centerMode: true,
         focusOnSelect: true,
         asNavFor: '.picture-carousel'
