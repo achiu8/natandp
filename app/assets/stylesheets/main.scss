@@ -7,6 +7,7 @@ $container_z_index: 1;
 $nav_mobile_width: 200px;
 $nav_mobile_toggle_margin: 10px;
 $transition_time: 0.5s;
+$nav_bar_offset: -96px;
 
 body {
   height: 100%;
@@ -19,27 +20,27 @@ h1, h2, h3, h4 {
   font-weight: 300;
 }
 
-#pictures {
+.pictures {
   background-color: #9DBBE1;
 }
 
-#rsvp {
+.rsvp {
   background-color: #F6E4D0;
 }
 
-#event-information {
+.event-information {
   background-color: #D0E3E9;
 }
 
-#story {
+.story {
   background-color: #F0F0F0;
 }
 
-#wedding-party {
+.wedding-party {
   background-color: #F8E3E2;
 }
 
-#registry {
+.registry {
   background-color: #DDE0C5;
 }
 
@@ -120,7 +121,7 @@ h1, h2, h3, h4 {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  
+
   img {
     vertical-align: middle;
     margin: 0.5em;
@@ -151,15 +152,30 @@ h1, h2, h3, h4 {
 }
 
 .app section {
-  min-height: calc(100vh - 3em);
+  position: relative;
+  min-height: calc(100vh - 2em);
   padding: 3em 3em 0;
   border: 1px solid transparent;
+
+  @include mobile {
+    min-height: 100vh;
+  }
+}
+
+.story {
+  top: 40px;
+
+  @include mobile {
+    top: 0;
+  }
 }
 
 .section-title {
-  font-size: 4em;
+  font-size: 3em;
   font-weight: 300;
   text-align: center;
+  margin-top: 0;
+
 }
 
 .rsvp-form {
@@ -206,15 +222,15 @@ label.check-box {
 
 .contact-info {
   margin-top: 100px;
-}
 
-.contact-info input {
-  width: 400px;
-  line-height: 1.5em;
-}
+  input {
+    width: 400px;
+    line-height: 1.5em;
 
-.not-attending {
-  margin: 2em;
+    @include mobile {
+      width: 300px;
+    }
+  }
 }
 
 .thank-you {
@@ -244,17 +260,33 @@ footer {
     display: block;
     margin: 0 auto;
     border: 10px solid white;
+    zoom: 80%;
   }
 }
 
 .picture-carousel-nav {
-  width: 70%;
+  width: 50%;
   margin: 0 auto;
 
   img {
     display: block;
     margin: 0 auto;
-    zoom: 30%;
+    zoom: 20%;
     border: 5px solid white;
+  }
+}
+
+.anchor {
+  display: block;
+  position: absolute;
+  width: 0;
+  height: 0;
+  z-index: -1;
+  top: $nav_bar_offset;
+  left: 0;
+  visibility: hidden;
+
+  @include mobile {
+  top: 0px;
   }
 }
