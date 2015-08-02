@@ -154,12 +154,18 @@ h1, h2, h3, h4 {
   min-height: calc(100vh - 3em);
   padding: 3em 3em 0;
   border: 1px solid transparent;
+
+  @include mobile {
+    min-height: 100vh;
+  }
 }
 
 .section-title {
   font-size: 4em;
   font-weight: 300;
   text-align: center;
+  margin-top: 0;
+
 }
 
 .rsvp-form {
