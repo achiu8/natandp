@@ -19,6 +19,30 @@ h1, h2, h3, h4 {
   font-weight: 300;
 }
 
+#pictures {
+  background-color: #9DBBE1;
+}
+
+#rsvp {
+  background-color: #F6E4D0;
+}
+
+#event-information {
+  background-color: #D0E3E9;
+}
+
+#story {
+  background-color: #F0F0F0;
+}
+
+#wedding-party {
+  background-color: #F8E3E2;
+}
+
+#registry {
+  background-color: #DDE0C5;
+}
+
 .scroll-lock {
   overflow-x: hidden;
 }
@@ -129,7 +153,7 @@ h1, h2, h3, h4 {
 .app section {
   min-height: calc(100vh - 3em);
   padding: 3em 3em 0;
-  border: 1px solid green;
+  border: 1px solid transparent;
 }
 
 .section-title {
@@ -153,7 +177,7 @@ h1, h2, h3, h4 {
 }
 
 .first-name {
-  width: 150px;
+  width: 7em;
 }
 
 .last-name {
@@ -219,5 +243,18 @@ footer {
   img {
     display: block;
     margin: 0 auto;
+    border: 10px solid white;
+  }
+}
+
+.picture-carousel-nav {
+  width: 70%;
+  margin: 0 auto;
+
+  img {
+    display: block;
+    margin: 0 auto;
+    zoom: 30%;
+    border: 5px solid white;
   }
 }
