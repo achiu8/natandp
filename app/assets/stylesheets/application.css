@@ -15,4 +15,5 @@
  *= require pure
  *= require grids-responsive
  *= require font-awesome
+ *= require_tree ../../../vendor/assets/bower_components/slick-carousel/slick
  */

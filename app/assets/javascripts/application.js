@@ -15,6 +15,7 @@
 //= require modernizr.custom
 //= require draggabilly.pkgd.min
 //= require elastiStack
+//= require_tree ../../../vendor/assets/bower_components/slick-carousel/slick
 //= require angular
 //= require angular-route
 //= require angular-rails-templates
