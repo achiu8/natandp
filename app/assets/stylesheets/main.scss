@@ -15,34 +15,6 @@ h1, h2, h3, h4 {
   font-weight: 300;
 }
 
-.pictures {
-  background-color: #9DBBE1;
-}
-
-.rsvp {
-  background-color: #F6E4D0;
-}
-
-.event-information {
-  background-color: #D0E3E9;
-}
-
-.story {
-  background-color: #F0F0F0;
-}
-
-.wedding-party {
-  background-color: #F8E3E2;
-}
-
-.registry {
-  background-color: #DDE0C5;
-}
-
-.scroll-lock {
-  overflow-x: hidden;
-}
-
 .container {
   position: relative;
   top: 0;
@@ -57,6 +29,7 @@ h1, h2, h3, h4 {
 
 .app section {
   position: relative;
+  background-color: $light_grey;
   min-height: $section_height;
   padding: $section_title_font_size $section_title_font_size 0;
   border: 1px solid transparent;
