@@ -1,12 +1,16 @@
 <nav class="nav-bar" id="navbar">
   <ul class="nav-bar-items">
-    <li class="nav-bar-item"><a ng-click="goTo('story')">our story</a></li>
-    <li class="nav-bar-item"><a ng-click="goTo('pictures')">pictures</a></li>
-    <li id="nav-bar-wedding-party" class="nav-bar-item"><a ng-click="goTo('wedding-party')">the wedding party</a></li>
+    <div class="nav-bar-section nav-bar-left">
+      <li class="nav-bar-item"><a ng-click="goTo('story')">our story</a></li>
+      <li class="nav-bar-item"><a ng-click="goTo('pictures')">pictures</a></li>
+      <li id="nav-bar-wedding-party" class="nav-bar-item"><a ng-click="goTo('wedding-party')">the wedding party</a></li>
+    </div>
     <img id="nat-and-p-logo" src="images/logo.png" alt="Nat and P are getting married" />
-    <li class="nav-bar-item"><a ng-click="goTo('event-information')">event information</a></li>
-    <li class="nav-bar-item"><a ng-click="goTo('rsvp')">rsvp</a></li>
-    <li id="nav-bar-registry" class="nav-bar-item"><a ng-click="goTo('registry')">registry</a></li>
+    <div class="nav-bar-section nav-bar-right">
+      <li class="nav-bar-item"><a ng-click="goTo('event-information')">event information</a></li>
+      <li class="nav-bar-item"><a ng-click="goTo('rsvp')">rsvp</a></li>
+      <li id="nav-bar-registry" class="nav-bar-item"><a ng-click="goTo('registry')">registry</a></li>
+    </div>
   </ul>
 </nav>
 

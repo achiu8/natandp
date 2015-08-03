@@ -24,9 +24,9 @@ var mainController = function($scope, $location, $anchorScroll) {
 
   function toggleLogoPosition() {
     if ($scope.navBarMobileShown) {
-      $logo.insertAfter($('#nav-bar-registry'));
+      $logo.insertAfter($('.nav-bar-right'));
     } else {
-      $logo.insertAfter($('#nav-bar-wedding-party'));
+      $logo.insertAfter($('.nav-bar-left'));
     }
   }
 };
