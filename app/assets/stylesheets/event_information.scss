@@ -1,0 +1,92 @@
+@import 'main';
+
+$background_opacity: 0.1;
+
+.event-information {
+  padding: 0 !important;
+  color: $white;
+}
+
+%event-information-text {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  z-index: 2;
+}
+
+.event-information .section-title {
+  @extend %event-information-text;
+  top: $section_title_font_size;
+}
+
+.event-information-mask {
+  position: absolute;
+  background-color: $event_information_tint;
+  width: 100%;
+  height: $section_height;
+}
+
+%event-information-half {
+  display: inline-block;
+  box-sizing: border-box;
+  width: 50%;
+  height: $section_height;
+}
+
+.event-information-background-half {
+  @extend %event-information-half;
+  float: left;
+}
+
+.saratoga-ceremony-background {
+  background: url('saratoga_ceremony.png') center center;
+  background-size: cover;
+  opacity: $background_opacity;
+}
+
+.saratoga-reception-background {
+  background: url('saratoga_reception.png') center center;
+  background-size: cover;
+  opacity: $background_opacity;
+}
+
+.saratoga-ceremony {
+  @extend %event-information-half;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.saratoga-reception {
+  @extend %event-information-half;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.event-details {
+  position: relative;
+  text-align: center;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2em;
+}
+
+.event-details p {
+  margin: 0;
+}
+
+.event-address {
+  @extend %event-information-text;
+  bottom: $section_title_font_size;
+  font-size: 2em;
+}
+
+.rings-icon {
+  position: absolute;
+  margin: 0 auto;
+  width: 125px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
