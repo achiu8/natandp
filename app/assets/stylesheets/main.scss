@@ -290,3 +290,27 @@ footer {
   top: 0px;
   }
 }
+
+.content {
+  background-color: white;
+  width: 80%;
+  padding: 2em;
+  margin: 1em auto;
+  line-height: 2em;
+  font-size: 1.2em;
+
+  div {
+    margin-bottom: 2em;
+  }
+
+  @include mobile {
+    padding: 1em;
+    margin: 2em auto;
+  }
+}
+
+.registry {
+  img {
+    zoom: 60%;
+  }
+}
