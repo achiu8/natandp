@@ -1,0 +1,36 @@
+@import 'utils';
+
+.picture-carousel {
+  img {
+    display: block;
+    margin: 0 auto;
+    border: 10px solid white;
+    zoom: 80%;
+  }
+
+  .slick-prev, .slick-next {
+    display: none !important;
+
+    @include mobile {
+      display: block !important;
+    }
+  }
+}
+
+.picture-carousel-nav {
+  width: 50%;
+  margin: 0 auto;
+
+  @include mobile {
+    display: none !important;
+  }
+
+  img {
+    display: block;
+    margin: 0 auto;
+    zoom: 20%;
+    border: 5px solid white;
+  }
+}
+
+

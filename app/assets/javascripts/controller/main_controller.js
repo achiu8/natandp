@@ -1,5 +1,4 @@
 var mainController = function($scope, $location, $anchorScroll) {
-  $scope.text = "hello world";
   $scope.navBarMobileShown = false;
 
   var $body = $(document.body);
