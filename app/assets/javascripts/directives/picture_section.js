@@ -6,7 +6,7 @@ var pictureSectionDirective = function() {
         fade: true,
         speed: 500,
         cssEase: 'linear',
-        arrows: false,
+        arrows: true,
         asNavFor: '.picture-carousel-nav'
       });
 
