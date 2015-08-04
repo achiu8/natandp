@@ -130,6 +130,12 @@ footer {
   width: 90%;
   margin: 0 auto;
   padding: 1em;
+
+  @include mobile {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+  }
 }
 
 .anchor {
