@@ -35,6 +35,9 @@ h1, h2, h3, h4 {
   min-height: 100%;
   transition: $transition_time;
   z-index: $container_z_index;
+  @include mobile {
+    top: 0;
+  }
 }
 
 .app section {
