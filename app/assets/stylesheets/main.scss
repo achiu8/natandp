@@ -132,8 +132,8 @@ footer {
   padding: 1em;
 
   @include mobile {
-    position: absolute;
     width: 100%;
+    position: absolute;
     text-align: center;
   }
 }
