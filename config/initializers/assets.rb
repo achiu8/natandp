@@ -2,6 +2,10 @@
 
 # Version of your assets, change this if you want to expire all your assets.
 Rails.application.config.assets.version = '1.0'
+Rails.application.config.assets.precompile += %w( slick-carousel/slick/ajax-loader.gif )
+Rails.application.config.assets.precompile += %w( slick-carousel/slick/fonts/slick.eot )
+Rails.application.config.assets.precompile += %w( slick-carousel/slick/fonts/slick.woff )
+Rails.application.config.assets.precompile += %w( slick-carousel/slick/fonts/slick.ttf )
 
 # Add additional assets to the asset load path
 # Rails.application.config.assets.paths << Emoji.images_path
