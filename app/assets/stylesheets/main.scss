@@ -25,7 +25,7 @@ h1, h2, h3, h4 {
 
 .container {
   position: relative;
-  top: 0;
+  top: 6em;
   left: 0;
   bottom: 100%;
   min-width: 100%;
@@ -47,8 +47,6 @@ h1, h2, h3, h4 {
 }
 
 .story {
-  top: 6em;
-
   @include mobile {
     top: 0;
   }
@@ -59,7 +57,16 @@ h1, h2, h3, h4 {
   font-weight: 300;
   text-align: center;
   margin-top: 0;
+}
 
+.section-divide {
+  position: absolute;
+  border-top: 1px solid $grey;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 6em;
+  width: 25%;
+  display: block;
 }
 
 .rsvp-form {
