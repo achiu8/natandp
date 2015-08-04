@@ -37,6 +37,7 @@ h1, h2, h3, h4 {
 
 .app section {
   position: relative;
+  background-color: $light_grey;
   min-height: $section_height;
   padding: $section_title_font_size $section_title_font_size 0;
   border: 1px solid transparent;

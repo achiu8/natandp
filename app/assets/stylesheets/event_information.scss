@@ -1,6 +1,6 @@
 @import 'main';
 
-$background_opacity: 0.1;
+$background_opacity: 0.5;
 
 .event-information {
   padding: 0 !important;
@@ -21,7 +21,7 @@ $background_opacity: 0.1;
 
 .event-information-mask {
   position: absolute;
-  background-color: $event_information_tint;
+  background-color: $light_grey;
   width: 100%;
   height: $section_height;
 }
@@ -39,13 +39,13 @@ $background_opacity: 0.1;
 }
 
 .saratoga-ceremony-background {
-  background: url('saratoga_ceremony.png') center center;
+  background: image-url('saratoga_ceremony.png') center center;
   background-size: cover;
   opacity: $background_opacity;
 }
 
 .saratoga-reception-background {
-  background: url('saratoga_reception.png') center center;
+  background: image-url('saratoga_reception.png') center center;
   background-size: cover;
   opacity: $background_opacity;
 }
