@@ -39,13 +39,13 @@ $background_opacity: 0.5;
 }
 
 .saratoga-ceremony-background {
-  background: url('saratoga_ceremony.png') center center;
+  background: image-url('saratoga_ceremony.png') center center;
   background-size: cover;
   opacity: $background_opacity;
 }
 
 .saratoga-reception-background {
-  background: url('saratoga_reception.png') center center;
+  background: image-url('saratoga_reception.png') center center;
   background-size: cover;
   opacity: $background_opacity;
 }
