@@ -173,11 +173,12 @@ footer {
   }
 }
 
-.content {
+.registry-content {
+  border: 1px solid $grey;
   background-color: white;
   width: 80%;
   padding: 2em;
-  margin: 1em auto;
+  margin: 2em auto;
   line-height: 2em;
   font-size: 1.2em;
 
@@ -193,6 +194,11 @@ footer {
 
 .registry {
   img {
+    margin: 0 auto;
+    width: 45%;
     zoom: 60%;
+    @include mobile {
+      width: 80%;
+    }
   }
 }
