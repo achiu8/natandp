@@ -1,14 +1,16 @@
 @import 'main';
 
+.hidden {
+  display: none;
+}
+
 .nav-bar {
   position: fixed;
   width: 100%;
-  height: $nav_bar_height;
   text-align: center;
   line-height: 3em;
   font-weight: 300;
   color: $charcoal;
-  background-color: $light_grey;
   z-index: $container_z_index + 1;
 
   @include mobile {
@@ -31,19 +33,22 @@
 
 .nav-bar-left {
   @include desktop {
+    margin-right: 0.75em;
     text-align: right;
   }
 }
 
 .nav-bar-right {
   @include desktop {
+    margin-left: 0.75em;
     text-align: left;
   }
 }
 
-.nav-bar-mobile {
+#nav-bar-mobile {
   display: none;
   @include mobile {
+    display: inline-block;
     position: fixed;
     top: $nav_mobile_toggle_margin;
     left: $nav_mobile_toggle_margin;
@@ -57,11 +62,11 @@
   left: $nav_mobile_width;
 }
 
-.shifted .nav-bar-mobile {
+.shifted #nav-bar-mobile {
   left: $nav_mobile_width + $nav_mobile_toggle_margin;
 }
 
-.nav-bar.show {
+.nav-bar-show {
   opacity: 1;
 }
 
@@ -110,4 +115,3 @@
     margin: 0;
   }
 }
-

@@ -28,6 +28,14 @@ var mainController = function($scope, $location, $anchorScroll) {
       $logo.insertAfter($('.nav-bar-left'));
     }
   }
+
+  $(window).on('scroll', function() {
+    if (window.scrollY > 0) {
+      $logo.addClass('hidden');
+    } else {
+      $logo.removeClass('hidden');
+    }
+  });
 };
 
 mainController.$inject = ['$scope', '$location', '$anchorScroll'];

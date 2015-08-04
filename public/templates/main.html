@@ -1,15 +1,15 @@
 <nav class="nav-bar" id="navbar">
   <ul class="nav-bar-items">
     <div class="nav-bar-section nav-bar-left">
-      <li class="nav-bar-item"><a ng-click="goTo('story')">our story</a></li>
-      <li class="nav-bar-item"><a ng-click="goTo('pictures')">pictures</a></li>
-      <li id="nav-bar-wedding-party" class="nav-bar-item"><a ng-click="goTo('wedding-party')">the wedding party</a></li>
+      <li class="nav-bar-item" ng-click="goTo('story')">our story</li>
+      <li class="nav-bar-item" ng-click="goTo('pictures')">pictures</li>
+      <li class="nav-bar-item" ng-click="goTo('wedding-party')">the wedding party</li>
     </div>
     <img id="nat-and-p-logo" src="images/logo.png" alt="Nat and P are getting married" />
     <div class="nav-bar-section nav-bar-right">
-      <li class="nav-bar-item"><a ng-click="goTo('event-information')">event information</a></li>
-      <li class="nav-bar-item"><a ng-click="goTo('rsvp')">rsvp</a></li>
-      <li id="nav-bar-registry" class="nav-bar-item"><a ng-click="goTo('registry')">registry</a></li>
+      <li class="nav-bar-item" ng-click="goTo('event-information')">event information</li>
+      <li class="nav-bar-item" ng-click="goTo('rsvp')">rsvp</li>
+      <li class="nav-bar-item" ng-click="goTo('registry')">registry</li>
     </div>
   </ul>
 </nav>
@@ -17,36 +17,36 @@
 <div class="container" ng-class="{shifted: navBarMobileShown}">
   <div id="top"></div>
 
-  <i ng-click="toggleNav()" class="nav-bar-mobile nav-bar-show fa fa-bars fa-2x"></i>
-  <i ng-click="toggleNav()" class="nav-bar-mobile nav-bar-hide fa fa-chevron-left fa-2x"></i>
+  <i ng-click="toggleNav()" id="nav-bar-mobile" class="nav-bar-show fa fa-bars fa-2x"></i>
+  <i ng-click="toggleNav()" id="nav-bar-mobile" class="nav-bar-hide fa fa-chevron-left fa-2x"></i>
 
-  <section class="story">
+  <section class="main-section story">
     <span id="story" class="anchor"></span>
     <h1 class="section-title">our story</h1>
   </section>
 
-  <section class="pictures">
+  <section class="main-section pictures">
     <span id="pictures" class="anchor"></span>
     <h1 class="section-title">pictures</h1>
     <picture-section> </picture-section>
   </section>
 
-  <section class="wedding-party">
+  <section class="main-section wedding-party">
     <span id="wedding-party" class="anchor"></span>
     <h1 class="section-title">the wedding party</h1>
   </section>
 
-  <section class="event-information">
+  <section class="main-section event-information">
     <span id="event-information" class="anchor"></span>
     <event-information></event-information>
   </section>
 
-  <section class="rsvp">
+  <section class="main-section rsvp">
     <span id="rsvp" class="anchor"></span>
     <rsvp></rsvp>
   </section>
 
-  <section class="registry">
+  <section class="main-section registry">
     <span id="registry" class="anchor"></span>
     <h1 class="section-title">registry</h1>
     <div class="content">
