@@ -54,12 +54,19 @@
   position: absolute;
   width: 100px;
   height: 100px;
-  background-color: $navy_blue;
   -o-transition:.4s;
   -ms-transition:.4s;
   -moz-transition:.4s;
   -webkit-transition:.4s;
   transition:.4s;
+
+  &.groomsmen {
+    background-color: $navy_blue;
+  }
+
+  &.bridesmaids {
+    background-color: $pink;
+  }
 }
 
 .cover:hover {
