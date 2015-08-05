@@ -1,11 +1,11 @@
-<nav class="nav-bar" id="navbar">
+<nav class="nav-bar animatedParent" id="navbar">
   <ul class="nav-bar-items">
     <div class="nav-bar-section nav-bar-left">
       <li class="nav-bar-item" ng-click="goTo('story')">OUR STORY</li>
       <li class="nav-bar-item" ng-click="goTo('pictures')">PICTURES</li>
       <li class="nav-bar-item" ng-click="goTo('wedding-party')">THE WEDDING PARTY</li>
     </div>
-    <img id="nat-and-p-logo" src="images/logo.png" alt="Nat and P are getting married" />
+    <img class="animated fadeIn slowest" id="nat-and-p-logo" src="images/logo.png" alt="Nat and P are getting married" />
     <div class="nav-bar-section nav-bar-right">
       <li class="nav-bar-item" ng-click="goTo('event-information')">EVENT INFORMATION</li>
       <li class="nav-bar-item" ng-click="goTo('rsvp')">RSVP</li>
@@ -22,24 +22,26 @@
 
   <section class="main-section story">
     <span id="story" class="anchor"></span>
-    <h1 class="section-title">OUR STORY</h1>
+    <h1 class="section-title animatedParent">
+      <span class="animated bounceInLeft slow">OUR </span><span class="animated bounceInRight slow "> STORY</span>
+    </h1>
     <div class="section-divide"></div>
   </section>
 
-  <section class="main-section pictures">
+  <section class="main-section pictures animatedParent">
     <span id="pictures" class="anchor"></span>
-    <h1 class="section-title">PICTURES</h1>
+    <h1 class="section-title animated fadeInRightShort slowest">PICTURES</h1>
     <picture-section> </picture-section>
     <div class="section-divide"></div>
   </section>
 
-  <section class="main-section wedding-party">
+  <section class="main-section wedding-party animatedParent">
     <span id="wedding-party" class="anchor"></span>
-    <h1 class="section-title">THE WEDDING PARTY</h1>
+    <h1 class="section-title animated bounceInRight">THE WEDDING PARTY</h1>
     <div class="section-divide"></div>
   </section>
 
-  <section class="main-section event-information">
+  <section class="main-section event-information animatedParent">
     <span id="event-information" class="anchor"></span>
     <event-information></event-information>
   </section>
@@ -52,6 +54,9 @@
 
   <section class="main-section registry">
     <span id="registry" class="anchor"></span>
-    <registry></registry>
+    <registry>
+    </registry>
   </section>
 </div>
+
+

@@ -17,6 +17,7 @@
 //= require elastiStack
 //= require_tree ../../../vendor/assets/bower_components/slick-carousel/slick
 //= require angular
+//= require skrollr.min
 //= require angular-route
 //= require angular-rails-templates
 //= require_tree .
