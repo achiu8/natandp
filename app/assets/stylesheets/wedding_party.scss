@@ -10,22 +10,26 @@
 }
 
 .wedding-party {
-  width: 80%;
-  margin: 5em auto;
-
   span {
     font-weight: 300;
     font-size: 18px;
-    line-height: calc(100px + 2em);
+    line-height: 100px;
     text-align: center;
-  }
 
-  @include mobile {
-    margin: 1em auto;
+    @include mobile {
+      line-height: 100px;
+    }
   }
 
   .wrapper {
     position: relative;
+    margin: 0 auto;
+    width: 63%;
+    margin-top: 5em;
+
+    @include mobile {
+      margin-top: 1em;
+    }
   }
 }
 
@@ -35,7 +39,11 @@
   min-width: 100px;
   max-height: 100px;
   min-height: 100px;
-  margin: 1em auto;
+  margin: 0 auto;
+
+  @include mobile {
+    margin: 1em auto;
+  }
 
   img {
     max-width: 100%;
