@@ -2,10 +2,15 @@
 
 .wedding-party {
   span {
-    font-weight: 300;
-    font-size: 24px;
+    font-weight: 400;
+    font-size: 18px;
+    color: $grey;
     line-height: $wedding_party_image_size;
     text-align: center;
+
+    &.title {
+      font-weight: 100;
+    }
 
     @include mobile {
       line-height: $wedding_party_image_size;
@@ -45,14 +50,28 @@
   position: absolute;
   width: $wedding_party_image_size;
   height: $wedding_party_image_size;
+  line-height: 92px;
   -o-transition:.4s;
   -ms-transition:.4s;
   -moz-transition:.4s;
   -webkit-transition:.4s;
   transition:.4s;
+  text-align: center;
+  border: 4px solid white;
+
+  span {
+    font-size: 1em;
+    color: $grey;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: normal;
+  }
 
   &.groomsmen {
-    background-color: $navy_blue;
+    background-color: grey;
+     span {
+       color: white;
+     }
   }
 
   &.bridesmaids {
@@ -63,3 +82,5 @@
 .cover:hover {
   opacity: 0;
 }
+
+
