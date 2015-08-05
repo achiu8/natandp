@@ -1,0 +1,65 @@
+@import 'main';
+
+.wedding-party {
+  span {
+    font-weight: 300;
+    font-size: 24px;
+    line-height: $wedding_party_image_size;
+    text-align: center;
+
+    @include mobile {
+      line-height: $wedding_party_image_size;
+    }
+  }
+
+  .wrapper {
+    position: relative;
+    margin: 0 auto;
+    width: 63%;
+    margin-top: 5em;
+
+    @include mobile {
+      margin-top: 1em;
+    }
+  }
+}
+
+.attendee {
+  display: block;
+  max-width: $wedding_party_image_size;
+  min-width: $wedding_party_image_size;
+  max-height: $wedding_party_image_size;
+  min-height: $wedding_party_image_size;
+  margin: 0 auto;
+
+  @include mobile {
+    margin: 1em auto;
+  }
+
+  img {
+    max-width: 100%;
+  }
+}
+
+.cover {
+  position: absolute;
+  width: $wedding_party_image_size;
+  height: $wedding_party_image_size;
+  -o-transition:.4s;
+  -ms-transition:.4s;
+  -moz-transition:.4s;
+  -webkit-transition:.4s;
+  transition:.4s;
+
+  &.groomsmen {
+    background-color: $navy_blue;
+  }
+
+  &.bridesmaids {
+    background-color: $pink;
+  }
+}
+
+.cover:hover {
+  opacity: 0;
+}
