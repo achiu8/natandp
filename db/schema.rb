@@ -19,12 +19,12 @@ ActiveRecord::Schema.define(version: 20150728041442) do
   create_table "guests", force: :cascade do |t|
     t.string   "first_name"
     t.string   "last_name"
-    t.integer  "plus_ones", default: 0
+    t.integer  "plus_ones",  default: 0
     t.string   "phone"
     t.string   "email"
     t.string   "attending"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
   end
 
 end

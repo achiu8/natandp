@@ -80,6 +80,7 @@ $background_opacity: 0.5;
   @extend %event-information-text;
   bottom: $section_title_font_size;
   font-size: 2em;
+  font-weight: 500;
 }
 
 .rings-icon {
