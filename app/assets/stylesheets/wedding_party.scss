@@ -1,23 +1,14 @@
-@import 'utils';
-@import 'variables';
-@import 'colors';
-@import 'font_faces/avenir';
-@import 'font-awesome';
-@import url(http://fonts.googleapis.com/css?family=Source+Code+Pro:400,200,300,500);
-
-.wedding-party:after, .wedding-party:before {
-  background-color: $light_grey;
-}
+@import 'main';
 
 .wedding-party {
   span {
     font-weight: 300;
     font-size: 24px;
-    line-height: 100px;
+    line-height: $wedding_party_image_size;
     text-align: center;
 
     @include mobile {
-      line-height: 100px;
+      line-height: $wedding_party_image_size;
     }
   }
 
@@ -35,10 +26,10 @@
 
 .attendee {
   display: block;
-  max-width: 100px;
-  min-width: 100px;
-  max-height: 100px;
-  min-height: 100px;
+  max-width: $wedding_party_image_size;
+  min-width: $wedding_party_image_size;
+  max-height: $wedding_party_image_size;
+  min-height: $wedding_party_image_size;
   margin: 0 auto;
 
   @include mobile {
@@ -52,8 +43,8 @@
 
 .cover {
   position: absolute;
-  width: 100px;
-  height: 100px;
+  width: $wedding_party_image_size;
+  height: $wedding_party_image_size;
   -o-transition:.4s;
   -ms-transition:.4s;
   -moz-transition:.4s;
