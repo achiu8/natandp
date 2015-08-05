@@ -1,0 +1,98 @@
+@import 'main';
+
+$form_z_index: 1;
+$grey_border: 1px solid $grey;
+
+%absolute-center {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+%envelope {
+  @extend %absolute-center;
+  bottom: 150px;
+  width: 775px;
+}
+
+.envelope-front {
+  @extend %envelope;
+  z-index: $form_z_index + 1;
+}
+
+.envelope-back {
+  @extend %envelope;
+  z-index: $form_z_index - 1;
+}
+
+.rsvp-form {
+  @extend %absolute-center;
+  bottom: 150px;
+  text-align: center;
+  font-size: 1.5em;
+  width: 700px;
+  height: 65vh;
+  border-top: $grey_border;
+  border-right: $grey_border;
+  border-left: $grey_border;
+  background-color: $white;
+  z-index: $form_z_index;
+}
+
+.rsvp-form input {
+  border: 0;
+  outline: 0;
+  border-bottom: 1px solid;
+  padding: 0.25em 0.5em;
+  margin: 0.5em;
+}
+
+.first-name {
+  width: 7em;
+}
+
+.last-name {
+  width: 200px;
+}
+
+.email, .phone{
+  width: 300px;
+}
+
+.rsvp-form select {
+  width: 200px;
+  border: none;
+}
+
+label.check-box {
+  line-height: 1.5em;
+}
+.num-guests {
+  margin: 1.5em;
+}
+
+.select-events {
+  margin: 1.5em;
+}
+
+.contact-info {
+  margin-top: 50px;
+
+  input {
+    width: 400px;
+    line-height: 1.5em;
+
+    @include mobile {
+      width: 300px;
+    }
+  }
+}
+
+.thank-you {
+  text-align: center;
+}
+
