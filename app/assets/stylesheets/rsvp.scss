@@ -1,10 +1,11 @@
 @import 'main';
 
-$form_z_index: 1;
+$paper_z_index: 1;
 $grey_border: 1px solid $grey;
 
 %absolute-center {
   position: absolute;
+  bottom: 150px;
   left: 50%;
   -webkit-transform: translateX(-50%);
   -moz-transform: translateX(-50%);
@@ -15,32 +16,40 @@ $grey_border: 1px solid $grey;
 
 %envelope {
   @extend %absolute-center;
-  bottom: 150px;
   width: 775px;
+}
+
+%paper-size {
+  width: 700px;
+  height: 500px;
 }
 
 .envelope-front {
   @extend %envelope;
-  z-index: $form_z_index + 1;
+  z-index: $paper_z_index + 1;
 }
 
 .envelope-back {
   @extend %envelope;
-  z-index: $form_z_index - 1;
+  z-index: $paper_z_index - 1;
 }
 
-.rsvp-form {
+.envelope-paper {
   @extend %absolute-center;
-  bottom: 150px;
-  text-align: center;
-  font-size: 1.5em;
-  width: 700px;
-  height: 65vh;
+  @extend %paper-size;
   border-top: $grey_border;
   border-right: $grey_border;
   border-left: $grey_border;
   background-color: $white;
-  z-index: $form_z_index;
+  z-index: $paper_z_index;
+}
+
+.rsvp-form {
+  @extend %absolute-center;
+  @extend %paper-size;
+  text-align: center;
+  font-size: 1.5em;
+  z-index: $paper_z_index + 2;
 }
 
 .rsvp-form input {
