@@ -1,6 +1,5 @@
 var rsvpController = function($scope, $http, $timeout) {
   $scope.guest = {};
-  $scope.guest.plusOnes = 0;
   $scope.guest.willAtend = 0;
   $scope.attendingOptions = [
     {value: true, label: 'in person'},
@@ -52,6 +51,38 @@ var rsvpController = function($scope, $http, $timeout) {
     }
 
     return 'neither';
+  }
+
+  $scope.showAttending = false;
+  var showAttendingBottom = '165px';
+  var showWeddingSelectionBottom = '265px';
+  var showContactInfoBottom = '350px';
+
+  var $contactInfo = $('.contact-info');
+  var $paper = $('.envelope-paper');
+  var $form = $('.rsvp-form');
+  var paperAndForm = [$paper, $form];
+
+  $scope.showAttendingSection = function() {
+    if ($scope.guest.firstName && $scope.guest.lastName) {
+      $scope.showAttending = true;
+      shiftPaperAndForm(showAttendingBottom);
+    }
+  };
+
+  $scope.showWeddingSelectionSection = function() {
+    shiftPaperAndForm(showWeddingSelectionBottom);
+  };
+
+  $scope.showContactInfoSection = function() {
+    shiftPaperAndForm(showContactInfoBottom);
+    $contactInfo.css('opacity', '1');
+  };
+
+  function shiftPaperAndForm(amount) {
+    paperAndForm.forEach(function($el) {
+      $el.css('bottom', amount);
+    });
   }
 };
 

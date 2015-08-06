@@ -14,43 +14,72 @@
 
 <div class="rsvp-form">
   <form name="rsvpForm" ng-submit="submitForm()">
-    I,
-    <input class="first-name" type="text" placeholder="FIRST NAME" name="first-name" ng-model="guest.firstName" />
-    <input class="last-name" type="text" placeholder="LAST NAME" name="last-name" ng-model="guest.lastName" />, will celebrate
-    <select ng-model="guest.willAttend" ng-options="o.value as o.label for o in attendingOptions"></select>
-
-    <span ng-if="guest.willAttend">
-      at
+    <div class="rsvp-form-section guest-name">
+      I,
+      <input
+        class="first-name"
+        type="text"
+        placeholder="FIRST NAME"
+        name="first-name"
+        ng-model="guest.firstName"
+        ng-change="showAttendingSection()"
+      />
+      <input
+        class="last-name"
+        type="text"
+        placeholder="LAST NAME"
+        name="last-name"
+        ng-model="guest.lastName"
+        ng-change="showAttendingSection()"
+      />,
       <br />
+    </div>
 
-      <div class="select-events">
-        <label class="check-box">
-          <input type="checkbox" ng-model="guest.attendingSaratoga" ng-true-value="true" ng-false-value="false"/>
-          Saratoga Springs, California<br /><i>on November 12, 2015 </i>
-        </label><br />
-        <label class="check-box">
-          <input type="checkbox" ng-model="guest.attendingThailand" ng-true-value="true" ng-false-value="false"/>
-          Bangkok, Thailand<br /><i>on February 12, 2016 </i>
-        </label><br />
-      </div>
+    <div class="rsvp-form-section attending" ng-if="showAttending">
+      will celebrate
+      <select
+        ng-model="guest.willAttend"
+        ng-options="o.value as o.label for o in attendingOptions"
+        ng-change="showWeddingSelectionSection()"
+      ></select>
+      <span ng-if="guest.willAttend">at</span>
+    </div>
+
+    <div class="rsvp-form-section wedding-selection">
+      <span ng-if="guest.willAttend">
+        <div class="select-events">
+          <label class="check-box">
+            <input type="checkbox" ng-model="guest.attendingSaratoga" ng-true-value="true" ng-false-value="false"/>
+            Saratoga Springs, California
+          </label><br />
+          <label class="check-box">
+            <input type="checkbox" ng-model="guest.attendingThailand" ng-true-value="true" ng-false-value="false"/>
+            Bangkok, Thailand
+          </label><br />
+        </div>
 
 
-      <div class="num-guests">
-        I will also bring
-        <select ng-model="guest.plusOnes" ng-options="num for num in [0,1,2,3,4,5]">
-        </select>
-        guests.
-      </div>
-    </span>
+        <div class="num-guests">
+          I will also bring
+          <select
+            ng-model="guest.plusOnes"
+            ng-options="num for num in [0,1,2,3,4,5]"
+            ng-change="showContactInfoSection()"
+          >
+          </select>
+          guests.
+        </div>
+      </span>
+    </div>
 
-    <div class="contact-info">
+    <div class="rsvp-form-section contact-info">
       <span>You can reach me at:</span>
       <br /><input class="email" type="text" ng-model="guest.email" placeholder="myemail@address.com"/>
       <br /><input class="phone" type="text" ng-model="guest.phone" placeholder="(109) 738 - 1234"/>
+      <br /><input class="rsvp-form-submit" type="submit" />
     </div>
-
-    <br /><input type="submit" />
   </form>
 </div>
+<div class="envelope-paper"></div>
 <img src="images/envelope_front.png" class="envelope-front" />
 <img src="images/envelope_back.png" class="envelope-back" />

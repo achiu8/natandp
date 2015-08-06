@@ -1,6 +1,8 @@
 @import 'main';
 
-$form_z_index: 1;
+$paper_z_index: 1;
+$paper_starting_bottom: 150px;
+$paper_ending_bottom: 350px;
 $grey_border: 1px solid $grey;
 
 %absolute-center {
@@ -19,28 +21,43 @@ $grey_border: 1px solid $grey;
   width: 775px;
 }
 
+%paper {
+  width: 700px;
+  height: 600px;
+  bottom: $paper_starting_bottom;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+}
+
 .envelope-front {
   @extend %envelope;
-  z-index: $form_z_index + 1;
+  z-index: $paper_z_index + 1;
 }
 
 .envelope-back {
   @extend %envelope;
-  z-index: $form_z_index - 1;
+  z-index: $paper_z_index - 1;
 }
 
-.rsvp-form {
+.envelope-paper {
   @extend %absolute-center;
-  bottom: 150px;
-  text-align: center;
-  font-size: 1.5em;
-  width: 700px;
-  height: 65vh;
+  @extend %paper;
   border-top: $grey_border;
   border-right: $grey_border;
   border-left: $grey_border;
   background-color: $white;
-  z-index: $form_z_index;
+  z-index: $paper_z_index;
+}
+
+.rsvp-form {
+  @extend %absolute-center;
+  @extend %paper;
+  text-align: center;
+  font-size: 1.25em;
+  z-index: $paper_z_index + 2;
 }
 
 .rsvp-form input {
@@ -81,6 +98,12 @@ label.check-box {
 
 .contact-info {
   margin-top: 50px;
+  opacity: 0;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
 
   input {
     width: 400px;
@@ -96,3 +119,6 @@ label.check-box {
   text-align: center;
 }
 
+.rsvp-form-submit {
+  width: 100px !important;
+}
