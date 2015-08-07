@@ -23,6 +23,7 @@ var weddingPartyDirective = function() {
     $scope.toggleModal = function(groomsman) {
       $scope.attendee = groomsman
       $scope.showModal = !$scope.showModal;
+      document.getElementById('navbar').style.display = 'none';
       document.body.style.overflow = 'hidden';
     }
   }];

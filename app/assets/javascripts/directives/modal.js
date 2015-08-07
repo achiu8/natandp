@@ -9,6 +9,7 @@ var modalDirective = function() {
       scope.hideModal = function() {
         scope.show = false;
         document.body.style.overflow = 'scroll';
+        document.getElementById('navbar').style.display = 'inherit';
       }
     }
   }
