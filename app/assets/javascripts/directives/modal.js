@@ -1,9 +1,16 @@
 var modalDirective = function() {
   return {
     scope: {
-      attendee: '='
+      attendee: '=',
+      show: '='
     },
-    templateUrl: 'templates/directives/modal.html'
+    templateUrl: 'templates/directives/modal.html',
+    link: function(scope, element, attr) {
+      scope.hideModal = function() {
+        scope.show = false;
+        document.body.style.overflow = 'scroll';
+      }
+    }
   }
 }
 

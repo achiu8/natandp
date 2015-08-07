@@ -4,54 +4,24 @@
     <span class="pure-u-24-24 pure-u-md-4-24 title">
       bridesmaids
     </span>
-    <div class="pure-u-11-24 pure-u-md-4-24 attendee">
+    <div ng-repeat="bridesmaid in bridesmaids" class="pure-u-11-24 pure-u-md-4-24 attendee" ng-click="toggleModal(bridesmaid)">
       <div class="cover bridesmaids">
-        <span>Maid of Honor</span>
+        <span>{{bridesmaid === 'kim' ? 'Maid of Honor':'Bridesmaid'}}</span>
       </div>
-      <img src="http://placehold.it/100x100" alt="picture">
-    </div>
-    <div class="pure-u-11-24 pure-u-md-4-24 attendee">
-      <div class="cover bridesmaids">
-        <span>Bridesmaid</span>
-      </div>
-      <img src="http://placehold.it/100x100" alt="picture">
-    </div>
-    <div class="pure-u-11-24 pure-u-md-4-24 attendee">
-      <div class="cover bridesmaids">
-        <span>Bridesmaid</span>
-      </div>
-      <img src="http://placehold.it/100x100" alt="picture">
-    </div>
-    <div class="pure-u-11-24 pure-u-md-4-24 attendee">
-      <div class="cover bridesmaids">
-        <span>Bridesmaid</span>
-      </div>
-      <img src="http://placehold.it/100x100" alt="picture">
-    </div>
-    <div class="pure-u-11-24 pure-u-md-4-24 attendee">
-      <div class="cover bridesmaids">
-        <span>Bridesmaid</span>
-      </div>
-      <img src="http://placehold.it/100x100" alt="picture">
-    </div>
-    <div class="pure-u-11-24 pure-u-md-4-24 attendee">
-      <div class="cover bridesmaids">
-        <span>Bridesmaid</span>
-      </div>
-      <img src="http://placehold.it/100x100" alt="picture">
+      <img ng-src="images/{{bridesmaid}}.jpg" alt="picture">
     </div>
   </div>
   <div class="pure-g wrapper">
     <span class="pure-u-24-24 pure-u-md-4-24 title">
       groomsmen
     </span>
-    <div ng-repeat="groomsman in groomsmen" class="pure-u-11-24 pure-u-md-4-24 attendee" ng-click="toggleModal()">
+    <div ng-repeat="groomsman in groomsmen" class="pure-u-11-24 pure-u-md-4-24 attendee" ng-click="toggleModal(groomsman)">
       <div class="cover groomsmen">
-        <span>Best Man</span>
+        <span>{{groomsman === 'geoff' ? 'Best Man':'Groomsman'}}</span>
       </div>
       <img ng-src="images/{{groomsman}}.jpg" alt="picture">
     </div>
   </div>
 </div>
 
-<modal ng-show="showModal" attendee="attendee"></modal>
+<modal show="showModal" attendee="attendee"></modal>

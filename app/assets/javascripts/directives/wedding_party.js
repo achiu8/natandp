@@ -9,12 +9,21 @@ var weddingPartyDirective = function() {
       'john'
     ]
 
-    $scope.modalShowing = false;
-    $scope.attendee = "Geoff";
+    $scope.bridesmaids = [
+      'kim',
+      'leah',
+      'amy',
+      'lisa',
+      'carla',
+      'ainsley'
+    ]
 
-    $scope.toggleModal = function() {
-      console.log("clicked");
+    $scope.showModal = false;
+
+    $scope.toggleModal = function(groomsman) {
+      $scope.attendee = groomsman
       $scope.showModal = !$scope.showModal;
+      document.body.style.overflow = 'hidden';
     }
   }];
 
