@@ -45,44 +45,13 @@
     <span class="pure-u-24-24 pure-u-md-4-24 title">
       groomsmen
     </span>
-    <div class="pure-u-11-24 pure-u-md-4-24 attendee" ng-click="toggleModal()">
+    <div ng-repeat="groomsman in groomsmen" class="pure-u-11-24 pure-u-md-4-24 attendee" ng-click="toggleModal()">
       <div class="cover groomsmen">
         <span>Best Man</span>
       </div>
-      <img src="images/geoff.jpg" alt="picture">
-    </div>
-    <div class="pure-u-11-24 pure-u-md-4-24 attendee">
-      <div class="cover groomsmen">
-        <span>Groosman</span>
-      </div>
-      <img src="images/guru.jpg" alt="picture">
-    </div>
-    <div class="pure-u-11-24 pure-u-md-4-24 attendee">
-      <div class="cover groomsmen">
-        <span>Groosman</span>
-      </div>
-      <img src="images/baummer.jpg" alt="picture">
-    </div>
-    <div class="pure-u-11-24 pure-u-md-4-24 attendee">
-      <div class="cover groomsmen">
-        <span>Groosman</span>
-      </div>
-      <img src="images/ben.jpg" alt="picture">
-    </div>
-    <div class="pure-u-11-24 pure-u-md-4-24 attendee">
-      <div class="cover groomsmen">
-        <span>Groosman</span>
-      </div>
-      <img src="images/ben.jpg" alt="picture">
-    </div>
-    <div class="pure-u-11-24 pure-u-md-4-24 attendee">
-      <div class="cover groomsmen">
-        <span>Groosman</span>
-      </div>
-      <img src="images/ben.jpg" alt="picture">
+      <img ng-src="images/{{groomsman}}.jpg" alt="picture">
     </div>
   </div>
 </div>
 
-<modal ng-show="showModal">
-</modal>
+<modal ng-show="showModal" attendee="attendee"></modal>

@@ -1,6 +1,16 @@
 var weddingPartyDirective = function() {
   var controller = ['$scope', function($scope) {
+    $scope.groomsmen = [
+      'geoff',
+      'guru',
+      'baummer',
+      'ben',
+      'andy',
+      'john'
+    ]
+
     $scope.modalShowing = false;
+    $scope.attendee = "Geoff";
 
     $scope.toggleModal = function() {
       console.log("clicked");
