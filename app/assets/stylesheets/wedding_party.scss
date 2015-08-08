@@ -1,4 +1,4 @@
-@import 'main';
+@import 'utils';
 
 .wedding-party {
   span {
@@ -42,7 +42,7 @@
   }
 
   img {
-    max-width: 100%;
+    width: 100%;
     border: 4px solid white;
   }
 }
@@ -51,7 +51,7 @@
   position: absolute;
   width: $wedding_party_image_size;
   height: $wedding_party_image_size;
-  line-height: 92px;
+  line-height: 103px;
   -o-transition:.4s;
   -ms-transition:.4s;
   -moz-transition:.4s;
@@ -74,9 +74,9 @@
 
   &.groomsmen {
     background-color: grey;
-     span {
-       color: white;
-     }
+    span {
+      color: white;
+    }
   }
 
   &.bridesmaids {
@@ -88,4 +88,37 @@
   opacity: 0;
 }
 
+.ng-modal-overlay {
+  position:fixed;
+  z-index: 100;
+  top: -$nav_bar_height;
+  left:0;
+  width:100%;
+  height:200%;
+  background-color:#000000;
+  opacity: 0.8;
+}
 
+.ng-modal-dialog {
+  z-index:10000;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+
+  background-color: #fff;
+  box-shadow: 4px 4px 80px #000;
+}
+
+.ng-modal-dialog-content {
+  padding:10px;
+  text-align: center;
+
+  img {
+    @include mobile {
+      zoom: 50%;
+    }
+  }
+}
