@@ -115,4 +115,10 @@
 .ng-modal-dialog-content {
   padding:10px;
   text-align: center;
+
+  img {
+    @include mobile {
+      zoom: 50%;
+    }
+  }
 }
