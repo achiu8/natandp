@@ -1,8 +1,8 @@
 <div class="content">
   <p>{{content}}</p>
-  <div ng-repeat="milestone in milestones">
-    <div class="milestone" ng-click="showContentFor(milestone)" ng-class="{{}}">
-      {{milestone}}
-    </div>
+  <div class="milestones">
+    | <span ng-repeat="milestone in milestones" ng-click="showContentFor(milestone)">
+      {{milestone}} | 
+    </span>
   </div>
 </div>
