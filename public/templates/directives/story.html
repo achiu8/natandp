@@ -1,8 +1,11 @@
 <div class="content">
   <p>{{content}}</p>
+  <br />
   <div class="milestones">
-    | <span ng-repeat="milestone in milestones" ng-click="showContentFor(milestone)">
-      {{milestone}} | 
+    <div class="slick-next"></div>
+    <span class="milestone" ng-repeat="milestone in milestones" ng-click="showContentFor(milestone)">
+      {{milestone}}
     </span>
+    <div class="slick-prev"></div>
   </div>
 </div>
