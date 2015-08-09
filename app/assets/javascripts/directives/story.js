@@ -3,12 +3,12 @@ var storyDirective = function() {
     templateUrl: 'templates/directives/story.html',
     link: function(scope, element, attr) {
       scope.story = {
-        'HOW WE MET'        : 'cccontent - how we metcontenccontent - how we metcontencontent - how we metcontent - how we metcontent - how we metcontent - how we metcontent - how we metcontent - how we metontent - how we met',
-        'STARTED DATING'    : 'ccontent - started datingcontent - started datingcoccontent - how we metcontenntent - started datingcontent - started datingcontent - started datingcontent - started datingontent - started dating',
-        'MOVED IN TOGETHER' : 'ccontent - moved in togethercontent - moved in togethercontent - moved in togethercontent - moved in togetherontent - ccontent - how we metcontenccontent - how we metcontenmoved in together',
-        'WELCOME BUTTER'    : 'cccontent - welcome buttercontent - welcome buttercontent - welcome buttercontent - welcome butterontent - welcome buttercontent - welcome buttercontent - welcome buttercontent - welcome buttercontent - welcome butterontent - welcome butter',
-        'PROPOSED'          : 'cccontent - proposedcontent - proposedcontent - proposedcontent - proposedontent - proposedcontent - proposedcontent - proposedcontent - proposedcontent - proposedontent - proposed',
-        'WEDDING'           : 'cccontent - wedding content - wedding content - wedding content - wedding ontent - wedding content - ccontent - how we metcontenwedding content - wedding content - wedding content - wedding ontent - wedding '
+        'HOW WE MET'        : 'Lorem ipsum dolor sit amet, in vidit reque vim. Ad iriure facilis necessitatibus sed, prima quando usu eu. Nulla erant vis ex, ad enim scaevola convenire usu. Vocibus consequat no quo. Mea at ferri euripidis, ius ei possit dolorum suscipit.',
+        'STARTED DATING'    : 'Lorem ipsum dolor sit amet, in vidit reque vim. Ad iriure facilis necessitatibus sed, prima quando usu eu. Nulla erant vis ex, ad enim scaevola convenire usu. Vocibus consequat no quo. Mea at ferri euripidis, ius ei possit dolorum suscipit.',
+        'MOVED IN TOGETHER' : 'Lorem ipsum dolor sit amet, in vidit reque vim. Ad iriure facilis necessitatibus sed, prima quando usu eu. Nulla erant vis ex, ad enim scaevola convenire usu. Vocibus consequat no quo. Mea at ferri euripidis, ius ei possit dolorum suscipit.',
+        'WELCOME BUTTER'    : 'Lorem ipsum dolor sit amet, in vidit reque vim. Ad iriure facilis necessitatibus sed, prima quando usu eu. Nulla erant vis ex, ad enim scaevola convenire usu. Vocibus consequat no quo. Mea at ferri euripidis, ius ei possit dolorum suscipit.',
+        'PROPOSED'          : 'Lorem ipsum dolor sit amet, in vidit reque vim. Ad iriure facilis necessitatibus sed, prima quando usu eu. Nulla erant vis ex, ad enim scaevola convenire usu. Vocibus consequat no quo. Mea at ferri euripidis, ius ei possit dolorum suscipit.',
+        'WEDDING'           : 'Lorem ipsum dolor sit amet, in vidit reque vim. Ad iriure facilis necessitatibus sed, prima quando usu eu. Nulla erant vis ex, ad enim scaevola convenire usu. Vocibus consequat no quo. Mea at ferri euripidis, ius ei possit dolorum suscipit.'
       }
       scope.milestones = Object.keys(scope.story);
       scope.selectedMilestone = scope.milestones[0];
