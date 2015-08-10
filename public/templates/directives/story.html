@@ -1,9 +1,9 @@
 <div class="content">
   <h3>{{selectedMilestone}}</h3>
-  <p>{{content}}</p>
+  <p>{{selectedContent}}</p>
   <br />
   <div class="milestones">
-    <span class="milestone" ng-repeat="milestone in milestones" ng-click="showContentFor(milestone)" ng-class="{selected: isSelected(milestone)}"g>
+    <span class="milestone" ng-repeat="(milestone, content) in stories" ng-click="showContentFor(milestone)" ng-class="{selected: isSelected(milestone)}"g>
       {{milestone}}
     </span>
   </div>
