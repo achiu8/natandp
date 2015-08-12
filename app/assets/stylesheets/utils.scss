@@ -5,6 +5,7 @@
 @import url(https://fonts.googleapis.com/css?family=Source+Code+Pro:400,200,300,500);
 
 $mobile_max: 768px;
+$desktop_min: 1024px;
 
 @mixin mobile {
   @media screen and (max-width: $mobile_max) {
@@ -12,8 +13,14 @@ $mobile_max: 768px;
   }
 }
 
+@mixin small_desktop {
+  @media screen and (min-width: $mobile_max + 1) and (max-width: $desktop_min - 1) {
+    @content;
+  }
+}
+
 @mixin desktop {
-  @media screen and (min-width: $mobile_max + 1) {
+  @media screen and (min-width: $desktop_min) {
     @content;
   }
 }
