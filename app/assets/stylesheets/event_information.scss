@@ -9,6 +9,16 @@ $background_opacity: 0.1;
 
 .event-title {
   position: relative;
+
+  @include mobile {
+    font-size: 24px;
+  }
+}
+
+.event-address {
+  @include mobile {
+    font-size: 20px;
+  }
 }
 
 %event-information-text {
