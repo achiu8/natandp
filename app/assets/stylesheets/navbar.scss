@@ -30,18 +30,32 @@
     display: inline-block;
     width: 40%;
   }
+
+  @include small_desktop {
+    display: inline-block;
+  }
 }
 
 .nav-bar-left {
+  margin-right: 0.75em;
+
+  @include mobile {
+    margin: 0;
+  }
+
   @include desktop {
-    margin-right: 0.75em;
     text-align: right;
   }
 }
 
 .nav-bar-right {
+  margin-left: 0.75em;
+
+  @include mobile {
+    margin: 0;
+  }
+
   @include desktop {
-    margin-left: 0.75em;
     text-align: left;
   }
 }
@@ -91,6 +105,10 @@
   img {
     vertical-align: middle;
     margin: 0.5em;
+
+    @include small_desktop {
+      display: none;
+    }
   }
 
   @include mobile {
@@ -114,5 +132,9 @@
   @include mobile {
     display: block;
     margin: 0;
+  }
+
+  @include small_desktop {
+    margin-left: 1em;
   }
 }
