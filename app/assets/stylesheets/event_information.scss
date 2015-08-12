@@ -1,10 +1,14 @@
 @import 'utils';
 
-$background_opacity: 0.5;
+$background_opacity: 0.1;
 
 .event-information {
   padding: 0 !important;
   color: $white;
+}
+
+.event-title {
+  position: relative;
 }
 
 %event-information-text {
@@ -21,7 +25,7 @@ $background_opacity: 0.5;
 
 .event-information-mask {
   position: absolute;
-  background-color: $light_grey;
+  background-color: $event_information_tint;
   width: 100%;
   height: $section_height;
 }
@@ -38,26 +42,26 @@ $background_opacity: 0.5;
   float: left;
 }
 
-.saratoga-ceremony-background {
+.saratoga-wedding-background {
   background: image-url('saratoga_ceremony.png') center center;
   background-size: cover;
   opacity: $background_opacity;
 }
 
-.saratoga-reception-background {
+.thailand-wedding-background {
   background: image-url('saratoga_reception.png') center center;
   background-size: cover;
   opacity: $background_opacity;
 }
 
-.saratoga-ceremony {
+.saratoga-wedding {
   @extend %event-information-half;
   position: absolute;
   top: 0;
   left: 0;
 }
 
-.saratoga-reception {
+.thailand-wedding {
   @extend %event-information-half;
   position: absolute;
   top: 0;
@@ -78,12 +82,6 @@ $background_opacity: 0.5;
 
 .event-details p {
   margin: 0;
-}
-
-.event-address {
-  @extend %event-information-text;
-  bottom: $section_title_font_size;
-  font-size: 2em;
 }
 
 .rings-icon {
