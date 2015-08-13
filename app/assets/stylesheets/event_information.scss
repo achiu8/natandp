@@ -1,6 +1,6 @@
 @import 'utils';
 
-$background_opacity: 0.1;
+$background_opacity: 0.75;
 
 .event-information {
   padding: 0 !important;
@@ -92,6 +92,11 @@ $background_opacity: 0.1;
 
 .event-details p {
   margin: 0;
+}
+
+.cake-icon,
+.cheers-icon {
+  margin-top: 1.5em;
 }
 
 .rings-icon {
