@@ -23,6 +23,10 @@ $grey_border: 1px solid $grey;
   @extend %absolute-center;
   bottom: 150px;
   width: 775px;
+
+  @include mobile {
+    display: none;
+  }
 }
 
 %paper {
@@ -34,6 +38,12 @@ $grey_border: 1px solid $grey;
   -ms-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;
+
+  @include mobile {
+    top: 10%;
+    padding: 1em;
+    width: 80%;
+  }
 }
 
 .envelope-front {
@@ -52,6 +62,7 @@ $grey_border: 1px solid $grey;
   border-top: $grey_border;
   border-right: $grey_border;
   border-left: $grey_border;
+  border-bottom: $grey_border;
   background-color: $white;
   z-index: $paper_z_index;
 }
@@ -62,6 +73,10 @@ $grey_border: 1px solid $grey;
   text-align: center;
   font-size: 1.25em;
   z-index: $paper_z_index + 2;
+
+  @include mobile {
+    font-size: 1em;
+  }
 }
 
 .rsvp-form input {

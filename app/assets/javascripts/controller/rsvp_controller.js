@@ -72,6 +72,9 @@ var rsvpController = function($scope, $http, $timeout) {
 
   $scope.showWeddingSelectionSection = function() {
     shiftPaperAndForm(showWeddingSelectionBottom);
+    if(!$scope.guest.willAttend) {
+      $scope.showContactInfoSection();
+    }
   };
 
   $scope.showContactInfoSection = function() {
