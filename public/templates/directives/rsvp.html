@@ -1,16 +1,5 @@
 <h1 class="section-title">RSVP</h1>
 
-<div class="thank-you" ng-if="showThankyou">
-  <p>
-    Thank you, {{guest.firstName}} {{guest.lastName}}
-  </p>
-  <p ng-if="guest.willAttend">
-    We can't wait to see you at the wedding!
-  </p>
-  <p ng-if="!guest.willAttend">
-    That's too bad you can't make it. We'll miss you!
-  </p>
-</div>
 
 <div class="rsvp-form">
   <form name="rsvpForm" ng-submit="submitForm()">
@@ -79,6 +68,17 @@
       <br /><input class="rsvp-form-submit" type="submit" />
     </div>
   </form>
+  <div class="thank-you" ng-if="showThankyou">
+    <p>
+      Thank you, {{guest.firstName}} {{guest.lastName}}
+    </p>
+    <p ng-if="guest.willAttend">
+      We can't wait to see you at the wedding!
+    </p>
+    <p ng-if="!guest.willAttend">
+      That's too bad you can't make it. We'll miss you!
+    </p>
+  </div>
 </div>
 <div class="envelope-paper"></div>
 <img src="images/envelope_front.png" class="envelope-front" />
