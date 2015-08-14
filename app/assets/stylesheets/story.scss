@@ -79,3 +79,32 @@
     color: $grey;
   }
 }
+
+.greetings {
+  position: absolute;
+  bottom: 40%;
+
+  &#peter {
+    left: 56%;
+
+    @include mobile {
+      left: 65%;
+    }
+  }
+
+  &#natalie {
+    left: 33%;
+
+    @include mobile {
+      left: 4%;
+    }
+  }
+}
+
+#intro-story {
+  text-align: center;
+}
+
+#show-main-story {
+  cursor: pointer;
+}
