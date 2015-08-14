@@ -2,11 +2,11 @@
 
 .story {
   position: relative;
-  background: url('http://placehold.it/1596x860') no-repeat center center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+  background: image-url('how-we-met.png') no-repeat center center;
+  // -webkit-background-size: cover;
+  // -moz-background-size: cover;
+  // -o-background-size: cover;
+  // background-size: cover;
 
   @include mobile {
     top: 0;
@@ -18,7 +18,7 @@
     }
 
     position: absolute;
-    top: 20%; left: 50%;
+    top: 15%; left: 50%;
     margin: 0 auto;
     width: 65%;
     min-height: 15em;
