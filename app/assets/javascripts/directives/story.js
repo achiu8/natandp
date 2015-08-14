@@ -1,4 +1,4 @@
-var storyDirective = function() {
+var storyDirective = function($timeout) {
   return {
     templateUrl: 'templates/directives/story.html',
     link: function(scope, element, attr) {
@@ -17,7 +17,7 @@ var storyDirective = function() {
         },
         'PROPOSAL': {
           backgroundUrl: 'images/proposed.png',
-          story: "On June 28, 2015, Peter took Natalie out to a fancy dinner...little did she know what was going to happen. When they got home, Peter got down on one knee and asked Natalie to spend the rest of their lives together. And Natalie said yes."
+          story: "On June 28, 2015, Peter took Natalie out to a fancy dinner...little did she know what was going to happen. When they got home, Peter got down on one knee and asked Natalie if she would spend the rest of her life with him. She said yes."
         },
         'WEDDING': {
           backgroundUrl: 'images/wedding.png',
@@ -27,6 +27,9 @@ var storyDirective = function() {
 
       scope.selectedMilestone = 'HOW WE MET';
       scope.selectedContent = scope.stories[scope.selectedMilestone].story;
+      scope.showMainStory = false;
+      scope.showGreeting = false;
+      scope.showIntroStory = false;
 
       scope.showContentFor = function(milestone) {
         scope.selectedMilestone = milestone;
@@ -43,9 +46,25 @@ var storyDirective = function() {
         $('.story').css('background-image', backgroundUrl);
       }
 
+      scope.showStory = function() {
+        scope.showMainStory = true;
+        scope.showIntroStory = false;
+        scope.showGreeting = false;
+        setBackground('images/how-we-met.png');
+      };
+
+      $timeout(function() {
+        setBackground('images/hi-swing.png');
+        $timeout(function() {
+          scope.showGreeting = true;
+          $timeout(function() {
+            scope.showIntroStory = true;
+          }, 750);
+        }, 500);
+      }, 1000);
     }
   }
 }
 
-storyDirective.$inject = []
+storyDirective.$inject = ['$timeout']
 natAndP.directive('story', storyDirective);

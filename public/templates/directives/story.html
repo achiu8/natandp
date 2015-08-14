@@ -1,13 +1,29 @@
-<div class="content">
-  <h3>{{selectedMilestone}}</h3>
-  <p>{{selectedContent}}</p>
-  <br />
-  <div class="milestones">
-    <span class="milestone" ng-repeat="(milestone, content) in stories" ng-click="showContentFor(milestone)" ng-class="{selected: isSelected(milestone)}"g>
-      {{milestone}}
-    </span>
+<div id="peter" class="greetings" ng-if="showGreeting">
+  Hi! I'm Peter.
+</div>
+<div id="natalie" class="greetings" ng-if="showGreeting">
+  Hi! I'm Natalie.
+</div>
+<div class="content" ng-if="showIntroStory || showMainStory">
+  <div id="intro-story" ng-if="showIntroStory">
+    <h2>Natalie and Peter</h2>
+    <h3>Are Getting Married</h3>
+    <h3>2015 / 2016</h3>
+    <div id="show-main-story" ng-click="showStory()">
+      Click here to read our story.
+    </div>
   </div>
-  <div class="arrow">
-    <img src="images/arrow.png" alt="" />
+  <div id="main-story" ng-if="showMainStory">
+    <h3>{{selectedMilestone}}</h3>
+    <p>{{selectedContent}}</p>
+    <br />
+    <div class="milestones">
+      <span class="milestone" ng-repeat="(milestone, content) in stories" ng-click="showContentFor(milestone)" ng-class="{selected: isSelected(milestone)}"g>
+        {{milestone}}
+      </span>
+    </div>
+    <div class="arrow">
+      <img src="images/arrow.png" alt="" />
+    </div>
   </div>
 </div>
