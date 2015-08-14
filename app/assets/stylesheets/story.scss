@@ -22,6 +22,7 @@
     margin: 0 auto;
     width: 65%;
     min-height: 15em;
+    max-height: 20em;
     background-color: white;
     padding: 2em;
 
@@ -36,6 +37,7 @@
 
     @include mobile {
       width: 90%;
+      font-size: 0.9em;
       padding: 1em;
     }
   }

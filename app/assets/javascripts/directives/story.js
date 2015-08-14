@@ -17,7 +17,7 @@ var storyDirective = function() {
         },
         'PROPOSAL': {
           backgroundUrl: 'images/proposed.png',
-          story: "On June 28, 2015, Peter took Natalie out to a fancy dinner...little did she know what was going to happen later that night. When they got home, while Natalie was spending time with Butter, Peter got down on one knee and asked Natalie to spend the rest of their lives together. And Natalie said yes."
+          story: "On June 28, 2015, Peter took Natalie out to a fancy dinner...little did she know what was going to happen. When they got home, Peter got down on one knee and asked Natalie to spend the rest of their lives together. And Natalie said yes."
         },
         'WEDDING': {
           backgroundUrl: 'images/wedding.png',
