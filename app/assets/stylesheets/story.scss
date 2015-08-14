@@ -39,6 +39,16 @@
       padding: 1em;
     }
   }
+
+  .arrow {
+    margin-left: 15%;
+    width: 90%;
+
+    img {
+     width: 100%;
+     height: 100%;
+    }
+  }
 }
 
 .milestones {
@@ -47,11 +57,20 @@
   width: 85%;
 
   span {
-    margin: 0.5em;
+    margin: 4%;
+
+    @include mobile {
+      margin: 3%;
+    }
   }
+
 
   .milestone {
     cursor: pointer;
+
+    @include mobile {
+      font-size: 0.65em;
+    }
   }
 
   .selected {

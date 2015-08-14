@@ -5,27 +5,23 @@ var storyDirective = function() {
       scope.stories = {
         'HOW WE MET': {
           backgroundUrl: 'images/how-we-met.png',
-          story: ' how we met Lorem ipsum dolor sit amet, in vidit reque vim. Ad iriure facilis necessitatibus sed, prima quando usu eu. Nulla erant vis ex, ad enim scaevola convenire usu. Vocibus consequat no quo. Mea at ferri euripidis, ius ei possit dolorum suscipit.'
+          story: "Natalie and Peter were introduced at work. It was Natalie's first interview with the company, and she met Peter while he was playing with a yoga ball. She thought it was the cutest thing in the world."
         },
-        'STARTED DATING': {
+        'DATING': {
           backgroundUrl: 'images/started-dating.png',
-          story: 'started dating Lorem ipsum dolor sit amet, in vidit reque vim. Ad iriure facilis necessitatibus sed, prima quando usu eu. Nulla erant vis ex, ad enim scaevola convenire usu. Vocibus consequat no quo. Mea at ferri euripidis, ius ei possit dolorum suscipit.'
+          story: 'They started dating and spent their time binge watching Netflix, going to concerts together, and eating out. They also cooked for each other, Peter would cook and Natalie baked...and they fell in love.'
         },
-        'MOVED IN TOGETHER': {
-          backgroundUrl: 'images/moved-in.png',
-          story: 'moved in together Lorem ipsum dolor sit amet, in vidit reque vim. Ad iriure facilis necessitatibus sed, prima quando usu eu. Nulla erant vis ex, ad enim scaevola convenire usu. Vocibus consequat no quo. Mea at ferri euripidis, ius ei possit dolorum suscipit.'
-        },
-        'WELCOME BUTTER': {
+        'BUTTER': {
           backgroundUrl: 'images/butter.png',
-          story: 'welcome butter Lorem ipsum dolor sit amet, in vidit reque vim. Ad iriure facilis necessitatibus sed, prima quando usu eu. Nulla erant vis ex, ad enim scaevola convenire usu. Vocibus consequat no quo. Mea at ferri euripidis, ius ei possit dolorum suscipit.'
+          story: "For Natalie's birthday, Peter took home Butter and welcomed her to the family. She's one of a kind and they couldn't be happier to have brough Butter into their lives."
         },
-        'PROPOSED': {
+        'PROPOSAL': {
           backgroundUrl: 'images/proposed.png',
-          story:'proposed Lorem ipsum dolor sit amet, in vidit reque vim. Ad iriure facilis necessitatibus sed, prima quando usu eu. Nulla erant vis ex, ad enim scaevola convenire usu. Vocibus consequat no quo. Mea at ferri euripidis, ius ei possit dolorum suscipit.'
+          story: "On June 28, 2015, Peter took Natalie out to a fancy dinner...little did she know what was going to happen later that night. When they got home, while Natalie was spending time with Butter, Peter got down on one knee and asked Natalie to spend the rest of their lives together. And Natalie said yes."
         },
         'WEDDING': {
           backgroundUrl: 'images/wedding.png',
-          story:'wedding Lorem ipsum dolor sit amet, in vidit reque vim. Ad iriure facilis necessitatibus sed, prima quando usu eu. Nulla erant vis ex, ad enim scaevola convenire usu. Vocibus consequat no quo. Mea at ferri euripidis, ius ei possit dolorum suscipit.'
+          story:'Natalie and Peter will have two weddings, one in California and one in Bangkok.'
         }
       }
 
