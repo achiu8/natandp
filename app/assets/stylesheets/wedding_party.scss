@@ -22,16 +22,16 @@
     margin: 0 auto;
     width: 70%;
     margin-top: 5em;
-
-    @include mobile {
-      margin-top: 1em;
-    }
   }
 
   .section-divide {
     @include mobile {
       display: none;
     }
+  }
+
+  @include mobile {
+    margin-bottom: 3em;
   }
 }
 
@@ -128,4 +128,3 @@
     }
   }
 }
-
