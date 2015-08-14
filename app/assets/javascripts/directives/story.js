@@ -13,7 +13,7 @@ var storyDirective = function() {
         },
         'BUTTER': {
           backgroundUrl: 'images/butter.png',
-          story: "For Natalie's birthday, Peter took home Butter and welcomed her to the family. She's one of a kind and they couldn't be happier to have brough Butter into their lives."
+          story: "Natalie always wanted a dog, so for her birthday, Peter took home Butter, an italian greyhound, and they welcomed her to the family. She's a one of a kind dog and they couldn't be happier to have brought Butter into their lives."
         },
         'PROPOSAL': {
           backgroundUrl: 'images/proposed.png',
@@ -21,7 +21,7 @@ var storyDirective = function() {
         },
         'WEDDING': {
           backgroundUrl: 'images/wedding.png',
-          story:'Natalie and Peter will have two weddings, one in California and one in Bangkok.'
+          story:"Natalie and Peter will have two weddings, the first one is in California and second is in Bangkok. They couldn't be happier and cannot wait to celebrate (and party) with their friends and family."
         }
       }
 
