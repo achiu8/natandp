@@ -141,3 +141,12 @@ label.check-box {
 .rsvp-form-submit {
   width: 100px !important;
 }
+
+#questions {
+  margin-top: 3em;
+
+  a {
+    color: $grey;
+    text-decoration: none;
+  }
+}
