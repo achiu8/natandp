@@ -57,6 +57,7 @@ var storyDirective = function($timeout) {
         setBackground('images/hi-swing.png');
         $timeout(function() {
           scope.showGreeting = true;
+          $('.content').addClass("loaded");
           $timeout(function() {
             scope.showIntroStory = true;
           }, 750);

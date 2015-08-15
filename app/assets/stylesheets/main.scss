@@ -23,7 +23,7 @@ h1, h2, h3, h4 {
 
 .container {
   position: relative;
-  top: 6em;
+  top: 3em;
   left: 0;
   bottom: 100%;
   min-width: 100%;
@@ -46,10 +46,13 @@ h1, h2, h3, h4 {
   padding: $section_title_font_size $section_title_font_size 0;
   border: 1px solid transparent;
 
-  @include mobile {
-    min-height: 100vh;
+  &.pictures {
+    @include mobile {
+      min-height: 75vh;
+    }
   }
 }
+
 
 .section-title {
   font-size: $section_title_font_size;
@@ -149,3 +152,4 @@ footer {
   display: block;
   font-weight: 300;
 }
+
