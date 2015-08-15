@@ -2,7 +2,7 @@
 
 .story {
   position: relative;
-  background: image-url('how-we-met.png') no-repeat center center;
+  background: image-url('intro.png') no-repeat center center;
   // -webkit-background-size: cover;
   // -moz-background-size: cover;
   // -o-background-size: cover;
@@ -62,7 +62,7 @@
     margin: 4%;
 
     @include mobile {
-      margin: 3%;
+      margin: 2%;
     }
   }
 
