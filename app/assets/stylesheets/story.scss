@@ -18,7 +18,7 @@
     }
 
     position: absolute;
-    top: 15%; left: 50%;
+    top: 10%; left: 50%;
     margin: 0 auto;
     width: 65%;
     min-height: 15em;
@@ -61,6 +61,15 @@
       width: 100%;
       height: 100%;
     }
+  }
+}
+
+img#nat-and-p-logo {
+  margin-bottom: 1em;
+  zoom: 50%;
+
+  @include mobile {
+    zoom: 100%;
   }
 }
 

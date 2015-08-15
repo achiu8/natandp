@@ -2,9 +2,6 @@ var mainController = function($scope, $location, $anchorScroll) {
   $scope.navBarMobileShown = false;
 
   var $body = $(document.body);
-  var $navBar = $('.nav-bar');
-  var $navBarIcon = $('.nav-bar-mobile');
-  var $logo = $('#nat-and-p-logo');
 
   $scope.goTo = function(id) {
     $location.hash(id);
@@ -20,22 +17,6 @@ var mainController = function($scope, $location, $anchorScroll) {
     toggleLogoPosition();
     $body.toggleClass('scroll-lock', $scope.navBarMobileShown);
   };
-
-  function toggleLogoPosition() {
-    if ($scope.navBarMobileShown) {
-      $logo.insertAfter($('.nav-bar-right'));
-    } else {
-      $logo.insertAfter($('.nav-bar-left'));
-    }
-  }
-
-  $(window).on('scroll', function() {
-    if (window.scrollY > 0) {
-      $logo.addClass('hidden');
-    } else {
-      $logo.removeClass('hidden');
-    }
-  });
 };
 
 mainController.$inject = ['$scope', '$location', '$anchorScroll'];
