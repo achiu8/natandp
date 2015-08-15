@@ -35,6 +35,17 @@
     -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
     box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
 
+    -webkit-transition: opacity 0.5s ease-in;
+    -moz-transition: opacity 0.5s ease-in;
+    -ms-transition: opacity 0.5s ease-in;
+    -o-transition: opacity 0.5s ease-in;
+    transition: opacity 0.5s ease-in;
+    opacity: 0;
+
+    &.loaded {
+      opacity: 1;
+    }
+
     @include mobile {
       width: 90%;
       font-size: 0.9em;
@@ -47,8 +58,8 @@
     width: 90%;
 
     img {
-     width: 100%;
-     height: 100%;
+      width: 100%;
+      height: 100%;
     }
   }
 }
@@ -66,9 +77,12 @@
     }
   }
 
-
   .milestone {
     cursor: pointer;
+
+    &:hover {
+      color: $light_grey;
+    }
 
     @include mobile {
       font-size: 0.65em;
@@ -76,7 +90,7 @@
   }
 
   .selected {
-    color: $grey;
+    color: $light_grey;
   }
 }
 
@@ -107,4 +121,8 @@
 
 #show-main-story {
   cursor: pointer;
+
+  &:hover {
+    color: $light_grey;
+  }
 }
