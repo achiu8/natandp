@@ -37,6 +37,10 @@ h1, h2, h3, h4 {
   @include mobile {
     top: 0;
   }
+
+  @include small_desktop {
+    height: 100%;
+  }
 }
 
 .app section {
@@ -48,7 +52,7 @@ h1, h2, h3, h4 {
 
   &.pictures {
     @include mobile {
-      min-height: 75vh;
+      min-height: 300px;
     }
   }
 }

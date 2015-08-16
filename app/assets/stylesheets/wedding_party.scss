@@ -20,6 +20,10 @@
     @include mobile {
       line-height: $wedding_party_image_size;
     }
+
+    @include small_desktop {
+      line-height: $wedding_party_image_size_smaller;
+    }
   }
 
   .wrapper {
@@ -27,6 +31,10 @@
     margin: 0 auto;
     width: 70%;
     margin-top: 5em;
+
+    @include small_desktop {
+      width: 100%;
+    }
 
     @include mobile {
       margin-top: 0;
@@ -56,6 +64,13 @@
     margin: 1em auto;
   }
 
+  @include small_desktop {
+    max-width: $wedding_party_image_size_smaller;
+    min-width: $wedding_party_image_size_smaller;
+    max-height: $wedding_party_image_size_smaller;
+    min-height: $wedding_party_image_size_smaller;
+  }
+
   img {
     width: 100%;
     border: 4px solid white;
@@ -74,6 +89,13 @@
   transition:.4s;
   text-align: center;
   border: 4px solid white;
+
+  @include small_desktop {
+    width: $wedding_party_image_size_smaller;
+    height: $wedding_party_image_size_smaller;
+    line-height: 85px;
+    font-size: 0.8em;
+  }
 
   @include mobile {
     display: none;

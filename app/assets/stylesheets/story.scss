@@ -15,6 +15,10 @@
   .content {
     h3 {
       text-align: center;
+
+      @include small_desktop {
+        font-size: 0.9em;
+      }
     }
 
     position: absolute;
@@ -22,7 +26,7 @@
     margin: 0 auto;
     width: 65%;
     min-height: 15em;
-    max-height: 20em;
+    max-height: 21em;
     background-color: white;
     padding: 2em;
 
@@ -45,6 +49,7 @@
     &.loaded {
       opacity: 1;
     }
+
 
     @include mobile {
       width: 90%;
@@ -119,7 +124,7 @@ img#nat-and-p-logo {
     left: 33%;
 
     @include mobile {
-      left: 4%;
+      left: 10%;
     }
   }
 }
