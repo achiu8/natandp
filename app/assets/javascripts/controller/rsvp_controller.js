@@ -1,4 +1,6 @@
 var rsvpController = function($scope, $http, $timeout) {
+  $scope.showLoading = false;
+  $scope.showError = false;
   $scope.guest = {};
   $scope.guest.willAtend = 0;
   $scope.attendingOptions = [
@@ -8,15 +10,18 @@ var rsvpController = function($scope, $http, $timeout) {
 
   $scope.submitForm = function() {
     var parsedResponse = parseRsvpFormResponse($scope.guest);
+    $scope.showLoading = true;
 
     $http.post('/create_guest', {
       guest: parsedResponse
     })
     .success(function() {
+      $scope.showLoading = false;
       console.log('success');
       showThankyouNotification();
     })
     .error(function() {
+      $scope.showError = true;
       console.log('error');
     });;
   };

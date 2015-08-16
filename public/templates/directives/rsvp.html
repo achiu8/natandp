@@ -72,6 +72,12 @@
       <br /><input class="rsvp-form-submit" type="submit" />
     </div>
   </form>
+  <div class="loading" ng-if="showLoading">
+    <p>Please wait while we process your request...</p>
+  </div>
+  <div class="error" ng-if="showError">
+    <p>Oops...something went wrong. Please try submitting the form again.</p>
+  </div>
   <div class="thank-you" ng-if="showThankyou">
     <p>
       Thank you, {{guest.firstName}} {{guest.lastName}}.
