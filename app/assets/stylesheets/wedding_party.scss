@@ -1,6 +1,7 @@
 @import 'utils';
 
 .wedding-party {
+
   span {
     font-weight: 300;
     font-size: 18px;
@@ -27,13 +28,17 @@
   }
 
   .wrapper {
+    @-moz-document url-prefix() {
+      text-align: center;
+    }
+
     position: relative;
     margin: 0 auto;
-    width: 70%;
+    width: 80%;
     margin-top: 5em;
 
     @include small_desktop {
-      width: 100%;
+      width: 80%;
     }
 
     @include mobile {
@@ -54,11 +59,18 @@
 
 .attendee {
   display: block;
+  margin: 0 auto;
+
+  @-moz-document url-prefix() {
+    display: inline-block;
+    margin: 0 5px;
+  }
+
   max-width: $wedding_party_image_size;
   min-width: $wedding_party_image_size;
   max-height: $wedding_party_image_size;
   min-height: $wedding_party_image_size;
-  margin: 0 auto;
+
 
   @include mobile {
     margin: 1em auto;
@@ -81,7 +93,7 @@
   position: absolute;
   width: $wedding_party_image_size;
   height: $wedding_party_image_size;
-  line-height: 103px;
+  line-height: 133px;
   -o-transition:.4s;
   -ms-transition:.4s;
   -moz-transition:.4s;
@@ -155,7 +167,7 @@
 
   img {
     @include mobile {
-      zoom: 50%;
+      zoom: 70%;
     }
   }
 }
