@@ -34,7 +34,7 @@
 
     position: relative;
     margin: 0 auto;
-    width: 60%;
+    width: 80%;
     margin-top: 5em;
 
     @include small_desktop {
@@ -93,7 +93,7 @@
   position: absolute;
   width: $wedding_party_image_size;
   height: $wedding_party_image_size;
-  line-height: 103px;
+  line-height: 133px;
   -o-transition:.4s;
   -ms-transition:.4s;
   -moz-transition:.4s;
