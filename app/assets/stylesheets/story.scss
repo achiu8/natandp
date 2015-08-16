@@ -71,11 +71,6 @@
 
 img#nat-and-p-logo {
   margin-bottom: 1em;
-  zoom: 50%;
-
-  @include mobile {
-    zoom: 40%;
-  }
 }
 
 .milestones {
