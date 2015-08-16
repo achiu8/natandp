@@ -1,9 +1,6 @@
 <h1 class="section-title">WEDDING PARTY</h1>
 <div class="wedding-party">
   <div class="pure-g wrapper">
-    <span class="pure-u-24-24 pure-u-md-4-24 title">
-      Bridesmaids
-    </span>
     <div ng-repeat="bridesmaid in bridesmaids" class="pure-u-11-24 pure-u-md-4-24 attendee" ng-click="toggleModal(bridesmaid)">
       <div class="cover bridesmaids">
         <span>{{bridesmaid === 'kim' ? 'Maid of Honor':'Bridesmaid'}}</span>
@@ -12,9 +9,6 @@
     </div>
   </div>
   <div class="pure-g wrapper">
-    <span class="pure-u-24-24 pure-u-md-4-24 title">
-      Groomsmen
-    </span>
     <div ng-repeat="groomsman in groomsmen" class="pure-u-11-24 pure-u-md-4-24 attendee" ng-click="toggleModal(groomsman)">
       <div class="cover groomsmen">
         <span>{{groomsman === 'geoff' ? 'Best Man':'Groomsman'}}</span>
