@@ -2,7 +2,7 @@
 <div class="wedding-party">
   <div class="pure-g wrapper">
     <div ng-repeat="bridesmaid in bridesmaids" class="pure-u-11-24 pure-u-md-4-24 attendee" ng-click="toggleModal(bridesmaid)">
-      <div class="cover bridesmaids">
+      <div class="cover bridesmaids content-font">
         <span>{{bridesmaid === 'kim' ? 'Maid of Honor':'Bridesmaid'}}</span>
       </div>
       <img ng-src="images/{{bridesmaid}}_thumbs.jpg" alt="picture">
@@ -10,7 +10,7 @@
   </div>
   <div class="pure-g wrapper">
     <div ng-repeat="groomsman in groomsmen" class="pure-u-11-24 pure-u-md-4-24 attendee" ng-click="toggleModal(groomsman)">
-      <div class="cover groomsmen">
+      <div class="cover groomsmen content-font">
         <span>{{groomsman === 'geoff' ? 'Best Man':'Groomsman'}}</span>
       </div>
       <img ng-src="images/{{groomsman}}_thumbs.jpg" alt="picture">

@@ -11,10 +11,6 @@
   .content {
     h3 {
       text-align: center;
-
-      @include small_desktop {
-        font-size: 0.9em;
-      }
     }
 
     position: absolute;
