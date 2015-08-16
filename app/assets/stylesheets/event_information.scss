@@ -1,10 +1,16 @@
 @import 'utils';
 
 $background_opacity: 0.75;
+$event_information_section_height: 1000px;
 
 .event-information {
   padding: 0 !important;
   color: $white;
+  height: $event_information_section_height;
+
+  @include small_desktop {
+    height: $event_information_section_height * 2;
+  }
 }
 
 .event-title {
@@ -33,49 +39,24 @@ $background_opacity: 0.75;
   top: $section_title_font_size;
 }
 
-.event-information-mask {
-  position: absolute;
-  background-color: $event_information_tint;
-  width: 100%;
-  height: $section_height;
-}
-
 %event-information-half {
-  display: inline-block;
-  box-sizing: border-box;
-  width: 50%;
-  height: $section_height;
-}
+  height: $event_information_section_height;
 
-.event-information-background-half {
-  @extend %event-information-half;
-  float: left;
-}
-
-.saratoga-wedding-background {
-  background: image-url('saratoga_ceremony.png') center center;
-  background-size: cover;
-  opacity: $background_opacity;
-}
-
-.thailand-wedding-background {
-  background: image-url('saratoga_reception.png') center center;
-  background-size: cover;
-  opacity: $background_opacity;
+  @include mobile {
+    height: $event_information_section_height / 2;
+  }
 }
 
 .saratoga-wedding {
   @extend %event-information-half;
-  position: absolute;
-  top: 0;
-  left: 0;
+  background: image-url('saratoga_wedding.png') center center;
+  background-size: cover;
 }
 
 .thailand-wedding {
   @extend %event-information-half;
-  position: absolute;
-  top: 0;
-  right: 0;
+  background: image-url('thailand_wedding5.png') center center;
+  background-size: cover;
 }
 
 .event-details {
@@ -87,7 +68,12 @@ $background_opacity: 0.75;
   -ms-transform: translateY(-50%);
   -o-transform: translateY(-50%);
   transform: translateY(-50%);
+  font-family: $main_font;
   font-size: 2em;
+
+  @include mobile {
+    font-size: 20px;
+  }
 }
 
 .event-details p {
