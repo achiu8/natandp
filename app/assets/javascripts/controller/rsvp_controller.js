@@ -27,10 +27,8 @@ var rsvpController = function($scope, $http, $timeout) {
   };
 
   function showThankyouNotification() {
-    $scope.showThankyou = true;
-    $timeout(function() {
-      $scope.showThankyou = false;
-    }, 7000);
+    $thankYou.css('opacity', 1);
+    $formWrapper.css('opacity', 0);
   }
 
   function parseRsvpFormResponse(response) {
@@ -64,6 +62,8 @@ var rsvpController = function($scope, $http, $timeout) {
   var showContactInfoBottom = '350px';
 
   var $contactInfo = $('.contact-info');
+  var $thankYou = $('.thank-you');
+  var $formWrapper = $('.rsvp-pre-submit');
   var $paper = $('.envelope-paper');
   var $form = $('.rsvp-form');
   var paperAndForm = [$paper, $form];

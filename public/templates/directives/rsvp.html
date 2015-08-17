@@ -1,95 +1,98 @@
 <h1 class="section-title">RSVP</h1>
 
+<div class="rsvp-pre-submit">
+  <div class="rsvp-form">
+    <form name="rsvpForm" class="content-font" ng-submit="submitForm()">
+      <div class="rsvp-form-section guest-name">
+        I,
+        <input
+          class="first-name"
+          type="text"
+          placeholder="FIRST NAME"
+          name="first-name"
+          ng-model="guest.firstName"
+          ng-change="showAttendingSection()"
+        />
+        <input
+          class="last-name"
+          type="text"
+          placeholder="LAST NAME"
+          name="last-name"
+          ng-model="guest.lastName"
+          ng-change="showAttendingSection()"
+        />,
+        <br />
+      </div>
 
-<div class="rsvp-form">
-  <form name="rsvpForm" class="content-font" ng-submit="submitForm()">
-    <div class="rsvp-form-section guest-name">
-      I,
-      <input
-        class="first-name"
-        type="text"
-        placeholder="FIRST NAME"
-        name="first-name"
-        ng-model="guest.firstName"
-        ng-change="showAttendingSection()"
-      />
-      <input
-        class="last-name"
-        type="text"
-        placeholder="LAST NAME"
-        name="last-name"
-        ng-model="guest.lastName"
-        ng-change="showAttendingSection()"
-      />,
-      <br />
+      <div class="rsvp-form-section attending" ng-if="showAttending">
+        will celebrate
+        <select
+          ng-model="guest.willAttend"
+          ng-options="o.value as o.label for o in attendingOptions"
+          ng-change="showWeddingSelectionSection()"
+        ></select>
+        <span ng-if="guest.willAttend">at</span>
+      </div>
+
+      <div class="rsvp-form-section wedding-selection">
+        <span ng-if="guest.willAttend">
+          <div class="select-events">
+            <label class="check-box">
+              <input type="checkbox" ng-model="guest.attendingSaratoga" ng-true-value="true" ng-false-value="false"/>
+              Saratoga Springs, California
+            </label><br />
+            <label class="check-box">
+              <input type="checkbox" ng-model="guest.attendingThailand" ng-true-value="true" ng-false-value="false"/>
+              Bangkok, Thailand
+            </label><br />
+          </div>
+
+
+          <div class="num-guests">
+            I will also bring
+            <select
+              ng-model="guest.plusOnes"
+              ng-options="num for num in [0,1,2,3,4,5]"
+              ng-change="showContactInfoSection()"
+            >
+            </select>
+            guests.
+          </div>
+        </span>
+      </div>
+
+      <div id="questions">
+        <p>For questions please email <a href="mailto:kprakobkit@gmail.com">kprakobkit@gmail.com</a></p>
+      </div>
+
+      <div class="rsvp-form-section contact-info">
+        <span>You can reach me at:</span>
+        <br /><input class="email" type="text" ng-model="guest.email" placeholder="myemail@address.com"/>
+        <br /><input class="phone" type="text" ng-model="guest.phone" placeholder="(109) 738 - 1234"/>
+        <br /><input class="rsvp-form-submit" type="submit" />
+      </div>
+    </form>
+    <div class="loading" ng-if="showLoading">
+      <p>Please wait while we process your request...</p>
     </div>
-
-    <div class="rsvp-form-section attending" ng-if="showAttending">
-      will celebrate
-      <select
-        ng-model="guest.willAttend"
-        ng-options="o.value as o.label for o in attendingOptions"
-        ng-change="showWeddingSelectionSection()"
-      ></select>
-      <span ng-if="guest.willAttend">at</span>
+    <div class="error" ng-if="showError">
+      <p>Oops...something went wrong. Please try submitting the form again.</p>
     </div>
-
-    <div class="rsvp-form-section wedding-selection">
-      <span ng-if="guest.willAttend">
-        <div class="select-events">
-          <label class="check-box">
-            <input type="checkbox" ng-model="guest.attendingSaratoga" ng-true-value="true" ng-false-value="false"/>
-            Saratoga Springs, California
-          </label><br />
-          <label class="check-box">
-            <input type="checkbox" ng-model="guest.attendingThailand" ng-true-value="true" ng-false-value="false"/>
-            Bangkok, Thailand
-          </label><br />
-        </div>
-
-
-        <div class="num-guests">
-          I will also bring
-          <select
-            ng-model="guest.plusOnes"
-            ng-options="num for num in [0,1,2,3,4,5]"
-            ng-change="showContactInfoSection()"
-          >
-          </select>
-          guests.
-        </div>
-      </span>
-    </div>
-
-    <div id="questions">
-      <p>For questions please email <a href="mailto:kprakobkit@gmail.com">kprakobkit@gmail.com</a></p>
-    </div>
-
-    <div class="rsvp-form-section contact-info">
-      <span>You can reach me at:</span>
-      <br /><input class="email" type="text" ng-model="guest.email" placeholder="myemail@address.com"/>
-      <br /><input class="phone" type="text" ng-model="guest.phone" placeholder="(109) 738 - 1234"/>
-      <br /><input class="rsvp-form-submit" type="submit" />
-    </div>
-  </form>
-  <div class="loading" ng-if="showLoading">
-    <p>Please wait while we process your request...</p>
   </div>
-  <div class="error" ng-if="showError">
-    <p>Oops...something went wrong. Please try submitting the form again.</p>
-  </div>
-  <div class="thank-you" ng-if="showThankyou">
-    <p>
-      Thank you, {{guest.firstName}} {{guest.lastName}}.
-    </p>
-    <p ng-if="guest.willAttend">
-      We can't wait to see you at the wedding!
-    </p>
-    <p ng-if="!guest.willAttend">
-      We are sad you cannot make it, and we'll miss you!
-    </p>
-  </div>
+  <div class="envelope-paper"></div>
+  <img src="images/envelope_front.png" class="envelope-front" />
+  <img src="images/envelope_back.png" class="envelope-back" />
 </div>
-<div class="envelope-paper"></div>
-<img src="images/envelope_front.png" class="envelope-front" />
-<img src="images/envelope_back.png" class="envelope-back" />
+<div class="thank-you">
+  <img src="images/airplane.png" class="airplane" />
+  <p>
+    Thank you, {{guest.firstName}} {{guest.lastName}}.
+  </p>
+  <p ng-if="guest.willAttend">
+    We can't wait to see you at the wedding!
+  </p>
+  <p ng-if="!guest.willAttend">
+    We are sad you cannot make it, and we'll miss you!
+  </p>
+  <p class="sign-thank-you">Natalie &amp; Peter</p>
+</div>
