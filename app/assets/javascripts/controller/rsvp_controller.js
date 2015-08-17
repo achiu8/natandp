@@ -57,6 +57,8 @@ var rsvpController = function($scope, $http, $timeout) {
   }
 
   $scope.showAttending = false;
+  var showWeddingSelection = false;
+  var showContactInfo = false;
   var showAttendingBottom = '165px';
   var showWeddingSelectionBottom = '265px';
   var showContactInfoBottom = '350px';
@@ -70,24 +72,27 @@ var rsvpController = function($scope, $http, $timeout) {
 
   $scope.showAttendingSection = function() {
     if ($scope.guest.firstName && $scope.guest.lastName) {
+      shiftPaperAndForm(showAttendingBottom, $scope.showAttending);
       $scope.showAttending = true;
-      shiftPaperAndForm(showAttendingBottom);
     }
   };
 
   $scope.showWeddingSelectionSection = function() {
-    shiftPaperAndForm(showWeddingSelectionBottom);
+    shiftPaperAndForm(showWeddingSelectionBottom, showWeddingSelection);
+    showWeddingSelection = true;
     if(!$scope.guest.willAttend) {
       $scope.showContactInfoSection();
     }
   };
 
   $scope.showContactInfoSection = function() {
-    shiftPaperAndForm(showContactInfoBottom);
+    shiftPaperAndForm(showContactInfoBottom, showContactInfo);
+    showContactInfo = true;
     $contactInfo.css('opacity', '1');
   };
 
-  function shiftPaperAndForm(amount) {
+  function shiftPaperAndForm(amount, shifted) {
+    if (shifted) return;
     paperAndForm.forEach(function($el) {
       $el.css('bottom', amount);
     });
