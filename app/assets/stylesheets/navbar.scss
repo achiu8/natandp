@@ -37,6 +37,9 @@
 }
 
 .nav-bar-left {
+  @include desktop {
+    margin-left: 3.5em;
+  }
   margin-right: 0.75em;
 
   @include mobile {
