@@ -7,14 +7,14 @@
 <div class="content">
   <div id="intro-story" ng-if="showIntroStory">
     <img id="nat-and-p-logo" src="images/logo.png" alt="Nat and P are getting married" />
-    <h3>Saratoga, CA - November 1, 2015 & Bangkok, Thailand - February 12, 2016</h3>
-    <div id="show-main-story" ng-click="showStory()">
+    <h3 class="content-font">Saratoga, California - November 1, 2015 <br> & <br> Bangkok, Thailand - February 12, 2016</h3>
+    <div id="show-main-story" class="content-font" ng-click="showStory()">
       Click here to read our story.
     </div>
   </div>
   <div id="main-story" ng-if="showMainStory">
     <h3>{{selectedMilestone}}</h3>
-    <p>{{selectedContent}}</p>
+    <p class="content-font">{{selectedContent}}</p>
     <br />
     <div class="milestones">
       <span class="milestone" ng-repeat="(milestone, content) in stories" ng-click="showContentFor(milestone)" ng-class="{selected: isSelected(milestone)}"g>
