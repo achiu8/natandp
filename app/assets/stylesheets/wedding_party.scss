@@ -60,6 +60,7 @@
 .attendee {
   display: block;
   margin: 0 auto;
+  cursor: pointer;
 
   @-moz-document url-prefix() {
     display: inline-block;
