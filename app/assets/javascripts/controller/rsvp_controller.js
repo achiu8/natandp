@@ -56,47 +56,18 @@ var rsvpController = function($scope, $http, $timeout) {
     return 'neither';
   }
 
-  $scope.showAttending = false;
-  var showWeddingSelection = false;
-  var showContactInfo = false;
-  var showAttendingBottom = '165px';
-  var showWeddingSelectionBottom = '265px';
-  var showContactInfoBottom = '350px';
-
+  $scope.showHint = true;
   var $contactInfo = $('.contact-info');
   var $thankYou = $('.thank-you');
   var $formWrapper = $('.rsvp-pre-submit');
-  var $paper = $('.envelope-paper');
-  var $form = $('.rsvp-form');
-  var paperAndForm = [$paper, $form];
 
-  $scope.showAttendingSection = function() {
-    if ($scope.guest.firstName && $scope.guest.lastName) {
-      shiftPaperAndForm(showAttendingBottom, $scope.showAttending);
-      $scope.showAttending = true;
-    }
-  };
-
-  $scope.showWeddingSelectionSection = function() {
-    shiftPaperAndForm(showWeddingSelectionBottom, showWeddingSelection);
-    showWeddingSelection = true;
-    if(!$scope.guest.willAttend) {
-      $scope.showContactInfoSection();
-    }
+  $scope.hideHint = function() {
+    $scope.showHint = false;
   };
 
   $scope.showContactInfoSection = function() {
-    shiftPaperAndForm(showContactInfoBottom, showContactInfo);
-    showContactInfo = true;
-    $contactInfo.css('opacity', '1');
+    $scope.showContactInfo = true;
   };
-
-  function shiftPaperAndForm(amount, shifted) {
-    if (shifted) return;
-    paperAndForm.forEach(function($el) {
-      $el.css('bottom', amount);
-    });
-  }
 };
 
 rsvpController.$inject = ['$scope', '$http', '$timeout'];

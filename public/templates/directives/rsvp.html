@@ -11,7 +11,7 @@
           placeholder="FIRST NAME"
           name="first-name"
           ng-model="guest.firstName"
-          ng-change="showAttendingSection()"
+          ng-change="hideHint()"
         />
         <input
           class="last-name"
@@ -19,12 +19,12 @@
           placeholder="LAST NAME"
           name="last-name"
           ng-model="guest.lastName"
-          ng-change="showAttendingSection()"
+          ng-change="hideHint()"
         />,
         <br />
       </div>
 
-      <div class="rsvp-form-section attending" ng-if="showAttending">
+      <div class="rsvp-form-section attending">
         will celebrate
         <select
           ng-model="guest.willAttend"
@@ -32,6 +32,10 @@
           ng-change="showWeddingSelectionSection()"
         ></select>
         <span ng-if="guest.willAttend">at</span>
+      </div>
+
+      <div class="hint" ng-if="showHint">
+        (start filling in the blanks to RSVP!)
       </div>
 
       <div class="rsvp-form-section wedding-selection">
@@ -61,11 +65,7 @@
         </span>
       </div>
 
-      <div id="questions">
-        <p>For questions please email <a href="mailto:kprakobkit@gmail.com">kprakobkit@gmail.com</a></p>
-      </div>
-
-      <div class="rsvp-form-section contact-info">
+      <div class="rsvp-form-section contact-info" ng-if="showContactInfo">
         <span>You can reach me at:</span>
         <br /><input class="email" type="text" ng-model="guest.email" placeholder="myemail@address.com"/>
         <br /><input class="phone" type="text" ng-model="guest.phone" placeholder="(109) 738 - 1234"/>
@@ -78,6 +78,9 @@
     <div class="error" ng-if="showError">
       <p>Oops...something went wrong. Please try submitting the form again.</p>
     </div>
+  </div>
+  <div id="questions">
+    <p>For questions please email <a href="mailto:kprakobkit@gmail.com">kprakobkit@gmail.com</a></p>
   </div>
   <div class="envelope-paper"></div>
   <img src="images/envelope_front.png" class="envelope-front" />
