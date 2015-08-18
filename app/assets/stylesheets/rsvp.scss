@@ -185,9 +185,19 @@ label.check-box {
   height: 75px;
   z-index: $paper_z_index + 2;
 
+
+  @include mobile {
+    display: block;
+    bottom: 334px;
+  }
+
   a {
     color: white;
     text-decoration: none;
+
+    @include mobile {
+      color: #999999;
+    }
   }
 }
 
