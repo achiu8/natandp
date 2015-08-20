@@ -10,25 +10,34 @@ var rsvpController = function($scope, $http, $timeout) {
 
   $scope.submitForm = function() {
     var parsedResponse = parseRsvpFormResponse($scope.guest);
-    $scope.showLoading = true;
+      showLoading();
 
     $http.post('/create_guest', {
       guest: parsedResponse
     })
     .success(function() {
-      $scope.showLoading = false;
       console.log('success');
       showThankyouNotification();
     })
     .error(function() {
-      $scope.showError = true;
+      showError()
       console.log('error');
     });;
   };
 
   function showThankyouNotification() {
     $thankYou.css('opacity', 1);
+    $loading.css('opacity', 0);
+  }
+
+  function showLoading() {
+    $loading.css('opacity', 1);
     $formWrapper.css('opacity', 0);
+  }
+
+  function showError() {
+    $error.css('opacity', 1);
+    $loading.css('opacity', 0);
   }
 
   function parseRsvpFormResponse(response) {
@@ -59,6 +68,8 @@ var rsvpController = function($scope, $http, $timeout) {
   $scope.showHint = true;
   var $contactInfo = $('.contact-info');
   var $thankYou = $('.thank-you');
+  var $loading = $('.loading');
+  var $error = $('.error');
   var $formWrapper = $('.rsvp-pre-submit');
 
   $scope.hideHint = function() {

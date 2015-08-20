@@ -147,7 +147,7 @@ label.check-box {
   }
 }
 
-.thank-you {
+.thank-you, .loading, .error {
   @extend %absolute-center;
   @extend %paper;
   text-align: center;
