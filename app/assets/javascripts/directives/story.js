@@ -17,7 +17,7 @@ var storyDirective = function($timeout) {
         },
         'PROPOSAL': {
           backgroundUrl: 'images/proposed.png',
-          story: "On June 28, 2015, Peter took Natalie out to a fancy dinner...little did she know what was going to happen. When they got home, Peter got down on one knee and asked Natalie if she would spend the rest of her life with him. She said yes!"
+          story: "On June 27, 2015, Peter took Natalie out to a fancy dinner...little did she know what was going to happen. When they got home, Peter got down on one knee and asked Natalie if she would spend the rest of her life with him. She said yes!"
         },
         'WEDDING': {
           backgroundUrl: 'images/wedding.png',
