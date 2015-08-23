@@ -1,8 +1,38 @@
 @import 'utils';
 
+.hi-swing, .how-we-met, .started-dating, .butter, .proposal, .wedding {
+  position: relative;
+  background: image-url('stories.png') no-repeat;
+  margin: 0 auto;
+  width: 144px;
+  height: 605px;
+  top: 70px;
+}
+
+.how-we-met {
+  background-position: -144px;
+}
+
+.started-dating {
+  background-position: calc(-144px * 2);
+}
+
+.butter {
+  background-position: calc(-144px * 3);
+}
+
+.proposal {
+  background-position: calc(-144px * 4);
+}
+
+.wedding {
+  background-position: calc(-144px * 5 - 1px);
+  width: 163px;
+}
+
+
 .story {
   position: relative;
-  background: image-url('intro.png') no-repeat center center;
 
   @include mobile {
     top: 0;
@@ -68,10 +98,6 @@ img#nat-and-p-logo {
 
   span {
     margin: 4%;
-
-    @include mobile {
-      margin: 2%;
-    }
   }
 
   .milestone {
@@ -93,14 +119,18 @@ img#nat-and-p-logo {
 
 .greetings {
   position: absolute;
-  bottom: 40%;
+  bottom: 33%;
   font-family: $handwritten_font;
+
+  @include mobile {
+    bottom: 50%;
+  }
 
   &#peter {
     left: 56%;
 
     @include mobile {
-      left: 65%;
+      left: 63%;
     }
   }
 
