@@ -56,10 +56,10 @@ var storyDirective = function($timeout) {
       $timeout(function() {
         setBackground('images/hi-swing.png');
         $timeout(function() {
-          scope.showGreeting = true;
           $('.content').addClass("loaded");
           $timeout(function() {
             scope.showIntroStory = true;
+            scope.showGreeting = true;
           }, 750);
         }, 500);
       }, 1000);
