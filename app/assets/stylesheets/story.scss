@@ -119,7 +119,7 @@ img#nat-and-p-logo {
 
 .greetings {
   position: absolute;
-  bottom: 40%;
+  bottom: 33%;
   font-family: $handwritten_font;
 
   @include mobile {
@@ -127,7 +127,7 @@ img#nat-and-p-logo {
   }
 
   &#peter {
-    left: 59%;
+    left: 56%;
 
     @include mobile {
       left: 63%;
@@ -135,7 +135,7 @@ img#nat-and-p-logo {
   }
 
   &#natalie {
-    left: 33%;
+    left: 37%;
 
     @include mobile {
       left: 19%;
