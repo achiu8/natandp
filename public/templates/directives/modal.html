@@ -2,7 +2,10 @@
   <div class='ng-modal-overlay' ng-click='hideModal()'></div>
   <div class='ng-modal-dialog' ng-style='dialogStyle'>
     <div class='ng-modal-dialog-content'>
-      <img ng-src="images/{{attendee}}.jpg" alt="picture">
+      <img ng-src="images/{{attendee.shortName}}.jpg" alt="picture">
     </div>
+    <h1 class="name">
+      {{attendee.fullName}}
+    </h1>
   </div>
 </div>
