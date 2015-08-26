@@ -30,7 +30,7 @@ var weddingPartyDirective = function() {
     $scope.bridesmaids = [
       {
         shortName: 'kim',
-        fullName: 'Kim Hoang',
+        fullName: 'Kimberly Hoang',
       },
       {
         shortName: 'leah',
