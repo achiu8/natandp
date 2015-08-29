@@ -18,7 +18,7 @@ var weddingPartyDirective = function() {
         fullName: 'Ben Pham',
       },
       {
-        shortName: 'Andy',
+        shortName: 'andy',
         fullName: 'Andy Chiu',
       },
       {
